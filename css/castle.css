@@ -1,0 +1,38 @@
+html,body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("../img/secondRoomCatle.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: 0% 80%;
+    padding: 20px 0px 0px 20px;
+    box-sizing: border-box;
+}
+.health {
+    width: 250px;
+    height: 50px;
+    position: relative;
+    background: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 4px solid gold;
+}
+.health img{
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+}
+
+
+.health_item{
+    width: 100%;
+    background-color: rgba(238, 91, 91, 0.884);
+    height: 100%;
+}
+.sword img{
+    
+}
