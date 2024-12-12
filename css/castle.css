@@ -10,7 +10,10 @@ body{
     background-position: 0% 80%;
     padding: 20px 0px 0px 20px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
+
 .health {
     width: 250px;
     height: 50px;
@@ -33,6 +36,68 @@ body{
     background-color: rgba(238, 91, 91, 0.884);
     height: 100%;
 }
-.sword img{
-    
+.inventory{
+    height: 202px;
+    width: 306px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+
+}
+.block{
+    height: 100px;
+    border: 1px solid black;
+    width: 100px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgba(238, 238, 169, 0.493);
+}
+.block:hover{
+    transform: scale(1.03);
+
+}
+.sword{
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+.sword img {
+    width: 25%;
+    transform:translateY(0px) translateX(400px) rotate(0deg);
+    transform-origin: 0 50%;
+    user-select: none;
+}
+.attack{
+    animation:0.3s attack 0s 1 forwards linear
+}
+.warrior{
+    position: absolute;
+    bottom:0px;
+    left: 400px;
+}
+@keyframes attack{
+    0% {
+        transform: translateY(0px) translateX(400px) rotate(0deg); /* Начальное положение */
+      }
+      50% {
+        transform: translateY(0px) translateX(400px) rotate(-45deg); /* Удар меча */
+      }
+      100% {
+        transform: translateY(0px) translateX(400px) rotate(0deg); /* Возврат в исходное положение */
+      }
+}
+.warrior img{
+    height: 350px;
+    width: 400px;
+    user-select: none;
+}
+.health-warrior{
+   border: 1px solid black;
+   width: 300px;
+   height: 30px;
+}
+.health-warrior-item{
+    width: 100%;
+    height: 100%;
+    background-color: red;
 }
