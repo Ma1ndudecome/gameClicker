@@ -11,31 +11,28 @@ body{
     padding: 20px 0px 0px 20px;
     box-sizing: border-box;
 }
-
 .health {
-    width: 350px;
+    width: 250px;
     height: 50px;
-    border: 2px solid gold;
     position: relative;
-    padding: 20px; /* Відступи всередині елемента */
-    border-radius: 15px; /* Згладжені кути */
-    background: #fff; /* Білий фон елемента */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
+    background: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 4px solid gold;
+}
+.health img{
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
 }
 
-.health::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 15px; /* Згладжені кути як у основного елемента */
-    background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Градієнтний бордер */
-    z-index: -1; /* Позаду елемента */
-}
+
 .health_item{
     width: 100%;
     background-color: rgba(238, 91, 91, 0.884);
     height: 100%;
+}
+.sword img{
+    
 }
