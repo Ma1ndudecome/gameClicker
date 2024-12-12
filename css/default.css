@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Dark;
+    src: url(../fonts/Ghostz-77qw.ttf);
+}
+body{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    font-family: Dark;
+}
