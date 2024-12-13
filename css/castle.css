@@ -74,6 +74,42 @@ body{
     bottom:0px;
     left: 400px;
 }
+
+.buff{
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left:400px;
+    cursor: pointer;
+}
+.buffEl{
+    width: 100px;
+    height: 100px;
+}
+.show{
+    display: block;
+}
+.toInv{
+    position: static;
+    left: 0;
+    top: 0;
+
+}
+.warrior img{
+    height: 350px;
+    width: 400px;
+    user-select: none;
+    cursor: pointer;
+}
+.health-warrior{
+   border: 1px solid black;
+   width: 300px;
+   height: 30px;
+}
+.health-warrior-item{
+    height: 100%;
+    background-color: red;
+}
 @keyframes attack{
     0% {
         transform: translateY(0px) translateX(400px) rotate(0deg); 
@@ -85,31 +121,8 @@ body{
         transform: translateY(0px) translateX(400px) rotate(0deg); 
       }
 }
-.buff{
-    display: none;
-    position: absolute;
-    bottom: 40px;
-    left:500px;
-    cursor: pointer;
-}
-.buff img{
-    width: 100px;
-    height: 100px;
-}
-.show{
-    display: block;
-}
-.warrior img{
-    height: 350px;
-    width: 400px;
-    user-select: none;
-}
-.health-warrior{
-   border: 1px solid black;
-   width: 300px;
-   height: 30px;
-}
-.health-warrior-item{
-    height: 100%;
-    background-color: red;
+@keyframes toInvenory{
+    50%{
+
+    }
 }
