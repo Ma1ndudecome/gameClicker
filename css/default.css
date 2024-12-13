@@ -2,9 +2,10 @@
     font-family: Dark;
     src: url(../fonts/Ghostz-77qw.ttf);
 }
+
+
 body{
     margin: 0;
-    font-family: Dark;
 }
 *{
     padding: 0;
