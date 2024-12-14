@@ -2,23 +2,48 @@ body{
     background-image: url(../img/mainCstle.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 15%;
+        width: 100%;
+        height: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
 }
 
+/* ! Main Section */
+.secti{
+    height: 1000px;
+    width: 800px;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+
+}
+
+.MainBanner{
+    width: 800px;
+    background-image: url(../img/WelcomeWood.PNG);
+    background-position: center;
+    background-size:  600px 180px;
+    background-repeat: no-repeat;
+}
 /* ! Banner - Logo */
 .Banner{
+    /* background-image: url(../img/WelcomeWood.PNG);
+    background-size:600px 180px;
+    background-repeat: no-repeat; 
+    background-position:center; */
     text-align: center;
-    opacity: 95%;
-    font-size: 30px;
+    font-size: 35px;
     color: whitesmoke;
     text-shadow: 
      5px  5px 10px black,  /*  Нижний - Справа */
      5px -5px 10px snow,  /*  Нижний - Слева */
     -5px  5px 10px black,  /* Верхний - Справа */
-    -5px -5px 10px black;  /* Верхний - Слева  */
+    -5px -5px 10px black; /* Верхний - Слева */
     h1{
         box-shadow: inset;
         margin: 0;
+        margin-left: 25px;
         font-family: Dark;
         padding: 0;
     }
@@ -27,33 +52,46 @@ body{
 /* ! ButtonMenu */
 
 .ButtonMenu{
-    display: grid;
-    justify-items: center;
-    margin-top: 30px;
+    /* display: grid;
+    align-content: center;
+    justify-items: center; */
+    margin-top: 100px;
     div{
+        background-image: url(../img/buttonWood.PNG);
+        background-size: cover;
         display: flex;
+        height: 110px;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         cursor: pointer;
         font-family: Dark;
         text-align: center;
-        width: 250px;
-        border: 3px solid black;
-        opacity: 70%;
+        width: 300px;
+        border-radius: 1px;
+        margin: 2px;
         img{
-            width: 50px;
-            height: 50px;
+            margin-right: 10px;
+            width: 60px;
+            
         }
         p{
-            font-size: 25px;
-            color: white;
+            font-size: 29px;
+            color: #deb887;
         }
     }
     div:hover{
+        transition-duration: 0.7s;
+        transform: scale(1.03);
         p{
-            transition-duration: 1s;
-            color: bisque;
+            transition-duration: 0.7s;
+            color: #987f5e;
             transform: scale(1.1);
+        }
+        img{
+            transform: scale(1.05);
+            transition: filter 0.7s ease;
+            filter: brightness(0) invert(1);
         }
     }
 }
+
