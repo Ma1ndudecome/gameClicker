@@ -1,20 +1,13 @@
-document.body.addEventListener('keydown', (event) =>{
-    if (event.ctrlKey) {
-        event.ctrlKey = alert('Idi Naxyu')
+const devInfo = document.querySelector(".DevWindow")
+
+const showButton = document.querySelector(".dev")
+
+showButton.addEventListener("click", ()=>{
+    devInfo.style.display = 'flex'
+})
+
+window.addEventListener("keydown", (e)=>{
+    if(e.key === 'q'){
+        devInfo.style.display = 'none'
     }
-})
-
-const DevButton = document.querySelector('.dev')
-const Book = document.querySelector('.DevWindow')
-
-DevButton.addEventListener('click', (event) =>{
-    Book.style.display = 'grid'
-    console.log(event.target);
-    
-})
-
-document.addEventListener('keydown', (event) =>{
-    if (event.key === 'q') {
-        Book.style.display = 'none'
-    } 
 })

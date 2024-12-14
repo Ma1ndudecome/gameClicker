@@ -1,80 +1,118 @@
 /* html body */
-html,body{
+html,
+body {
     margin: 0;
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     background-image: url("../img/secondRoomCatle.jpg");
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-position: 0% 80%;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
-body:before{
-    opacity: 0;
-    transition: 0.3s;
-    content: "";
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    left:0;
-    top:0;
-    background-image: linear-gradient(
-        0deg,
-        hsla(0, 0%, 100%, 0) 9%,
-        hsla(0, 47%, 97%, 0) 32%,
-        hsla(0, 47%, 94%, 0) 39%,
-        rgba(241, 218, 218, 0) 44%,
-        rgba(236, 202, 202, 0) 47%,
-        hsla(0, 49%, 83%, 0) 50%,
-        hsla(0, 50%, 78%, 0) 53%,
-        hsla(0, 52%, 74%, 0) 55%,
-        hsla(0, 53%, 69%, 0) 59%,
-        hsla(0, 55%, 63%, 0) 63%,
-        hsla(0, 57%, 56%, 0) 70%,
-        hsla(0, 83%, 43%, 0.356) 91%
-      );
-      z-index: 0;
-}
-body.show-bef:before{
-    opacity: 1;
-}
-body::after{
+
+body:before {
     opacity: 0;
     transition: 0.6s;
     content: "";
     width: 100%;
     height: 30%;
     position: absolute;
-    left:0;
-    top:0;
-    background-image: linear-gradient(
-        0deg,
-        hsla(0, 0%, 100%, 0) 9%,
-        hsla(0, 47%, 97%, 0) 32%,
-        hsla(0, 47%, 94%, 0) 39%,
-        rgba(241, 218, 218, 0) 44%,
-        rgba(236, 202, 202, 0) 47%,
-        hsla(0, 49%, 83%, 0) 50%,
-        hsla(0, 50%, 78%, 0) 53%,
-        hsla(0, 52%, 74%, 0) 55%,
-        hsla(0, 53%, 69%, 0) 59%,
-        hsla(0, 55%, 63%, 0) 63%,
-        hsla(0, 57%, 56%, 0) 70%,
-        hsla(108, 100%, 51%, 0.568) 91%
-      );
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(0deg,
+            hsla(0, 0%, 100%, 0) 9%,
+            hsla(0, 47%, 97%, 0) 32%,
+            hsla(0, 47%, 94%, 0) 39%,
+            rgba(241, 218, 218, 0) 44%,
+            rgba(236, 202, 202, 0) 47%,
+            hsla(0, 49%, 83%, 0) 50%,
+            hsla(0, 50%, 78%, 0) 53%,
+            hsla(0, 52%, 74%, 0) 55%,
+            hsla(0, 53%, 69%, 0) 59%,
+            hsla(0, 55%, 63%, 0) 63%,
+            hsla(0, 57%, 56%, 0) 70%,
+            hsla(0, 83%, 43%, 0.356) 91%);
+    z-index: 0;
 }
-body.show-after::after{
+
+body.show-bef:before {
+    opacity: 1;
+    background-image: linear-gradient(0deg,
+            hsla(0, 0%, 100%, 0) 9%,
+            hsla(0, 47%, 97%, 0) 32%,
+            hsla(0, 47%, 94%, 0) 39%,
+            rgba(241, 218, 218, 0) 44%,
+            rgba(236, 202, 202, 0) 47%,
+            hsla(0, 49%, 83%, 0) 50%,
+            hsla(0, 50%, 78%, 0) 53%,
+            hsla(0, 52%, 74%, 0) 55%,
+            hsla(0, 53%, 69%, 0) 59%,
+            hsla(0, 55%, 63%, 0) 63%,
+            hsla(0, 57%, 56%, 0) 70%,
+            hsla(0, 100%, 51%, 0.278) 91%);
+}
+
+body.show-after-more::before {
+    opacity: 1;
+
+    background-image: linear-gradient(0deg,
+            hsla(0, 0%, 100%, 0) 9%,
+            hsla(0, 47%, 97%, 0) 32%,
+            hsla(0, 47%, 94%, 0) 39%,
+            rgba(241, 218, 218, 0) 44%,
+            rgba(236, 202, 202, 0) 47%,
+            hsla(0, 49%, 83%, 0) 50%,
+            hsla(0, 50%, 78%, 0) 53%,
+            hsla(0, 52%, 74%, 0) 55%,
+            hsla(0, 53%, 69%, 0) 59%,
+            hsla(0, 55%, 63%, 0) 63%,
+            hsla(0, 57%, 56%, 0) 70%,
+            hsla(0, 100%, 51%, 0.568) 91%);
+}
+
+body::after {
+    opacity: 0;
+    transition: 0.6s;
+    content: "";
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(0deg,
+            hsla(0, 0%, 100%, 0) 9%,
+            hsla(0, 47%, 97%, 0) 32%,
+            hsla(0, 47%, 94%, 0) 39%,
+            rgba(241, 218, 218, 0) 44%,
+            rgba(236, 202, 202, 0) 47%,
+            hsla(0, 49%, 83%, 0) 50%,
+            hsla(0, 50%, 78%, 0) 53%,
+            hsla(0, 52%, 74%, 0) 55%,
+            hsla(0, 53%, 69%, 0) 59%,
+            hsla(0, 55%, 63%, 0) 63%,
+            hsla(0, 57%, 56%, 0) 70%,
+            hsla(108, 100%, 51%, 0.568) 91%);
+}
+
+body.show-after::after {
     opacity: 1;
 }
-.container{
+
+.container {
     padding: 20px 0px 0px 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
+
 /* loseBlock */
-.lose{
+.lose {
     opacity: 0;
     visibility: hidden;
     display: flex;
@@ -87,7 +125,8 @@ body.show-after::after{
     z-index: 999;
     transition: 0.3s;
 }
-.lose-block{
+
+.lose-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,27 +136,31 @@ body.show-after::after{
     background-color: rgba(122, 122, 122, 0.779);
     border-radius: 20px;
 }
-.lose-block a{
-    color:black;
+
+.lose-block a {
+    color: black;
     font-size: 30px;
     background-color: lightblue;
     padding: 10px;
     border-radius: 10px;
 }
-.showLoseIcon{
+
+.showLoseIcon {
     opacity: 1;
     visibility: visible;
 }
+
 /* helth */
 .health {
     width: 250px;
     height: 50px;
     position: relative;
-    background: #fff; 
+    background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 4px solid gold;
 }
-.health img{
+
+.health img {
     position: absolute;
     left: -10px;
     top: -15px;
@@ -126,12 +169,13 @@ body.show-after::after{
 }
 
 
-.health_item{
+.health_item {
     background-color: rgba(238, 91, 91, 0.884);
     height: 100%;
 }
+
 /* inventory */
-.inventory{
+.inventory {
     height: 202px;
     width: 306px;
     display: flex;
@@ -139,7 +183,8 @@ body.show-after::after{
     margin-top: 200px;
 
 }
-.block{
+
+.block {
     height: 100px;
     border: 1px solid black;
     width: 100px;
@@ -147,79 +192,102 @@ body.show-after::after{
     cursor: pointer;
     background-color: rgba(238, 238, 169, 0.493);
 }
-.block:hover{
+
+.block:hover {
     transform: scale(1.03);
 
 }
+
 /* sword style */
-.sword{
-    display: flex;
-    justify-content: center;
-    margin-top: 75px;
-}
-.sword img {
+
+.img {
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
     width: 25%;
-    transform:translateY(0px) translateX(400px) rotate(0deg);
+    transform: translateY(0px) translateX(400px) rotate(0deg);
     transform-origin: 0 100%;
     user-select: none;
+    z-index: 1;
 }
+
 /* animation */
-.attack{
-    animation:0.3s attack 0s 1 forwards linear
+.attack {
+    animation: 0.3s attack 0s 1 forwards linear
 }
+
 /* warrir style */
-.warrior{
-    position: absolute;
-    bottom:0px;
-    left: 400px;
+.spawn-warrior {
+    display: flex;
+    flex-direction: column;
+    height: 47%;
+    z-index: 2;
 }
+
+.warrior {
+    position: absolute;
+    bottom: 0px;
+    left: 400px;
+    z-index: 10;
+}
+
 /* buff style */
-.buff{
+.buff {
     display: none;
     position: absolute;
     bottom: 40px;
-    left:400px;
+    left: 400px;
     cursor: pointer;
+    z-index: 20;
 }
-.buffEl{
+
+.buffEl {
     width: 100px;
     height: 100px;
 }
+
 /* show buff */
-.show{
+.show {
     display: block;
 }
-.toInv{
+
+.toInv {
     position: static;
     left: 0;
     top: 0;
 
 }
+
 /* warrior style */
-.warrior img{
+.warrior img {
     height: 350px;
     width: 400px;
     user-select: none;
     cursor: pointer;
 }
-.health-warrior{
-   border: 1px solid black;
-   width: 300px;
-   height: 30px;
+
+.health-warrior {
+    border: 1px solid black;
+    width: 300px;
+    height: 30px;
 }
-.health-warrior-item{
+
+.health-warrior-item {
     height: 100%;
     background-color: red;
 }
+
 /* animation */
-@keyframes attack{
+@keyframes attack {
     0% {
-        transform: translateY(0px) translateX(400px) rotate(0deg); 
-      }
-      50% {
+        transform: translateY(0px) translateX(400px) rotate(0deg);
+    }
+
+    50% {
         transform: translateY(0px) translateX(400px) rotate(-45deg);
-      }
-      100% {
-        transform: translateY(0px) translateX(400px) rotate(0deg); 
-      }
+    }
+
+    100% {
+        transform: translateY(0px) translateX(400px) rotate(0deg);
+    }
 }
