@@ -1,5 +1,5 @@
 body{
-    background-image: url(../img/mainCstle.jpg);
+    background-image: url(../img/hobbit-7457589_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
         width: 100%;
@@ -11,7 +11,7 @@ body{
 
 /* ! Main Section */
 .secti{
-    height: 1000px;
+    height: 900px;
     width: 800px;
     display: grid;
     justify-items: center;
@@ -23,7 +23,7 @@ body{
     width: 800px;
     background-image: url(../img/WelcomeWood.PNG);
     background-position: center;
-    background-size:  600px 180px;
+    background-size:  750px 150px;
     background-repeat: no-repeat;
 }
 /* ! Banner - Logo */
@@ -34,17 +34,17 @@ body{
     background-position:center; */
     text-align: center;
     font-size: 35px;
-    color: whitesmoke;
+    color: #deb887;
     text-shadow: 
      5px  5px 10px black,  /*  Нижний - Справа */
-     5px -5px 10px snow,  /*  Нижний - Слева */
+     5px -5px 10px #deb887,  /*  Нижний - Слева */
     -5px  5px 10px black,  /* Верхний - Справа */
     -5px -5px 10px black; /* Верхний - Слева */
     h1{
         box-shadow: inset;
         margin: 0;
         margin-left: 25px;
-        font-family: Dark;
+        font-family: Wood;
         padding: 0;
     }
 }
@@ -64,7 +64,7 @@ body{
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        font-family: Dark;
+        font-family: Wood;
         text-align: center;
         width: 300px;
         border-radius: 1px;
@@ -93,5 +93,60 @@ body{
             filter: brightness(0) invert(1);
         }
     }
+}
+
+.DevWindow{
+    font-family: Dark;
+    height: 500px;
+    width: 400px;
+    background-image: url(../img/Book.png);
+    background-position: center;
+    background-size: 500px 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    text-align: start;
+    .bookWindow{
+        width: 330px;
+        height: 340px;
+        p{
+
+        }
+    }
+
+    .press{
+        cursor: pointer;
+        width: 300px;
+        background-image: url(../img/buttonWood.PNG);
+        background-repeat: no-repeat;
+        background-size: 230px 70px;
+        background-position: center;
+        text-align: center;
+        position: absolute;
+        p{
+            color: white;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+
+    .press:hover{
+        transition-duration: 0.7s;
+        transform: scale(1.03);
+        p{
+            transition-duration: 0.7s;
+            color: #b6a287;
+            transform: scale(1.03);
+        }
+        img{
+            transform: scale(1.05);
+            transition: filter 0.7s ease;
+            filter: brightness(0) invert(1);
+        }
+    }
+
 }
 

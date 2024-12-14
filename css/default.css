@@ -3,6 +3,11 @@
     src: url(../fonts/Ghostz-77qw.ttf);
 }
 
+@font-face {
+    font-family: Wood;
+    src: url(../fonts/Rimba.ttf);
+}
+
 
 body{
     margin: 0;
@@ -11,5 +16,4 @@ body{
     padding: 0;
     list-style: none;
     text-decoration: none;
-
 }
