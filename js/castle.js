@@ -118,7 +118,6 @@ buffEl.addEventListener("click", () => {
 
 function killGlory(){
     if(glory.healt <= 0){
-        loseIcon.classList.add("showLoseIcon")
         classListAddFunc(loseIcon, "showLoseIcon")
 
         classListRemoveFunc(document.body, "show-bef")
