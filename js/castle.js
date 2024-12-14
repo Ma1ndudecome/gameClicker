@@ -27,10 +27,10 @@ class Warrior extends Character {
     }
     damage() {
         if (!imgSword.classList.contains("attack")) {
-            this.healt -= 20
+            this.healt -= 40
         }
         if(this.healt <=0){
-            
+            this.healt = 0
             this.isAlive = false
             this.die()
             return
@@ -89,7 +89,7 @@ buffEl.addEventListener("click", () => {
     buffEl.classList.add("toInv");
     invAdd.append(buffEl);
     buffEl.addEventListener("click", () => {
-        glory.healt += 30;
+       glory.healt = Math.min(glory.healt + 30, 100)
         GloryHealth.style.width = glory.healt + '%'
 
         buffEl.remove()
