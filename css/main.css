@@ -48,7 +48,10 @@ body{
         padding: 0;
     }
 }
+.show{
+    display: flex;
 
+}
 /* ! ButtonMenu */
 
 .ButtonMenu{
@@ -96,13 +99,13 @@ body{
 }
 
 .DevWindow{
+    display: none;
     font-family: Dark;
     height: 500px;
     width: 400px;
     background-image: url(../img/Book.png);
     background-position: center;
     background-size: 500px 400px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;

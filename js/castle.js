@@ -104,7 +104,6 @@ buffEl.addEventListener("click", () => {
        glory.healt = Math.min(glory.healt + 30, 100)
         showHp(GloryHealth, glory)
         buffEl.remove()
-        // document.body.classList.add("show-after")
         classListAddFunc(document.body, "show-after")
 
         setTimeout(()=>{
@@ -135,4 +134,9 @@ function classListAddFunc(el, clas){
 }
 function classListRemoveFunc(el, clas){
     el.classList.remove(clas)
+}
+
+function createNewCharacter(){
+    const zalman = new Warrior("Zalman");
+
 }
