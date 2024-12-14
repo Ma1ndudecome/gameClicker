@@ -1,3 +1,4 @@
+/* html body */
 html,body{
     margin: 0;
     width: 100%;
@@ -8,12 +9,106 @@ body{
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: 0% 80%;
-    padding: 20px 0px 0px 20px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
-
+body:before{
+    opacity: 0;
+    transition: 0.3s;
+    content: "";
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-image: linear-gradient(
+        0deg,
+        hsla(0, 0%, 100%, 0) 9%,
+        hsla(0, 47%, 97%, 0) 32%,
+        hsla(0, 47%, 94%, 0) 39%,
+        rgba(241, 218, 218, 0) 44%,
+        rgba(236, 202, 202, 0) 47%,
+        hsla(0, 49%, 83%, 0) 50%,
+        hsla(0, 50%, 78%, 0) 53%,
+        hsla(0, 52%, 74%, 0) 55%,
+        hsla(0, 53%, 69%, 0) 59%,
+        hsla(0, 55%, 63%, 0) 63%,
+        hsla(0, 57%, 56%, 0) 70%,
+        hsla(0, 83%, 43%, 0.356) 91%
+      );
+      z-index: 0;
+}
+body.show-bef:before{
+    opacity: 1;
+}
+body::after{
+    opacity: 0;
+    transition: 0.6s;
+    content: "";
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    left:0;
+    top:0;
+    background-image: linear-gradient(
+        0deg,
+        hsla(0, 0%, 100%, 0) 9%,
+        hsla(0, 47%, 97%, 0) 32%,
+        hsla(0, 47%, 94%, 0) 39%,
+        rgba(241, 218, 218, 0) 44%,
+        rgba(236, 202, 202, 0) 47%,
+        hsla(0, 49%, 83%, 0) 50%,
+        hsla(0, 50%, 78%, 0) 53%,
+        hsla(0, 52%, 74%, 0) 55%,
+        hsla(0, 53%, 69%, 0) 59%,
+        hsla(0, 55%, 63%, 0) 63%,
+        hsla(0, 57%, 56%, 0) 70%,
+        hsla(108, 100%, 51%, 0.568) 91%
+      );
+}
+body.show-after::after{
+    opacity: 1;
+}
+.container{
+    padding: 20px 0px 0px 20px;
+}
+/* loseBlock */
+.lose{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.681);
+    z-index: 999;
+    transition: 0.3s;
+}
+.lose-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(122, 122, 122, 0.779);
+    border-radius: 20px;
+}
+.lose-block a{
+    color:black;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+.showLoseIcon{
+    opacity: 1;
+    visibility: visible;
+}
+/* helth */
 .health {
     width: 250px;
     height: 50px;
@@ -35,6 +130,7 @@ body{
     background-color: rgba(238, 91, 91, 0.884);
     height: 100%;
 }
+/* inventory */
 .inventory{
     height: 202px;
     width: 306px;
@@ -55,6 +151,7 @@ body{
     transform: scale(1.03);
 
 }
+/* sword style */
 .sword{
     display: flex;
     justify-content: center;
@@ -66,15 +163,17 @@ body{
     transform-origin: 0 100%;
     user-select: none;
 }
+/* animation */
 .attack{
     animation:0.3s attack 0s 1 forwards linear
 }
+/* warrir style */
 .warrior{
     position: absolute;
     bottom:0px;
     left: 400px;
 }
-
+/* buff style */
 .buff{
     display: none;
     position: absolute;
@@ -86,6 +185,7 @@ body{
     width: 100px;
     height: 100px;
 }
+/* show buff */
 .show{
     display: block;
 }
@@ -95,6 +195,7 @@ body{
     top: 0;
 
 }
+/* warrior style */
 .warrior img{
     height: 350px;
     width: 400px;
@@ -110,6 +211,7 @@ body{
     height: 100%;
     background-color: red;
 }
+/* animation */
 @keyframes attack{
     0% {
         transform: translateY(0px) translateX(400px) rotate(0deg); 
@@ -120,9 +222,4 @@ body{
       100% {
         transform: translateY(0px) translateX(400px) rotate(0deg); 
       }
-}
-@keyframes toInvenory{
-    50%{
-
-    }
 }

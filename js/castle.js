@@ -27,7 +27,7 @@ class Warrior extends Character {
     }
     damage() {
         if (!imgSword.classList.contains("attack")) {
-            this.healt -= 40
+            this.healt -= 30
         }
         if(this.healt <=0){
             this.healt = 0
@@ -51,17 +51,24 @@ const warriroHealt = document.querySelector(".health-warrior-item")
 const GloryHealth = document.querySelector(".health_item")
 const invAdd = document.querySelector(".block")
 const buffEl = document.querySelector(".buff")
+const container = document.querySelector(".container")
+const loseIcon = document.querySelector(".lose")
 let id
 function damageGlory(){
      id = setInterval(()=>{
         glory.damage()
-        GloryHealth.style.width = glory.healt + "%"
+        showHp(GloryHealth, glory)
+        document.body.classList.toggle("show-bef")
+        killGlory()
+
     },1500)
+
     return id
 }
 damageGlory()
-document.addEventListener("click", () => {
-    imgSword.classList.add("attack")
+container.addEventListener("click", () => {
+    imgSword.classList.add("attack");
+   
 
 })
 setInterval(() => {
@@ -78,10 +85,11 @@ function createDamageWarrior() {
     warriors.damage()
     if (!warriors.isAlive) {
         clearInterval(id)
+        document.body.classList.remove("show-bef")
         buff.classList.add("show")
         return
     }
-    warriroHealt.style.width = warriors.healt + "%"
+    showHp(warriroHealt, warriors)
 
 }
 
@@ -90,9 +98,27 @@ buffEl.addEventListener("click", () => {
     invAdd.append(buffEl);
     buffEl.addEventListener("click", () => {
        glory.healt = Math.min(glory.healt + 30, 100)
-        GloryHealth.style.width = glory.healt + '%'
-
+        showHp(GloryHealth, glory)
         buffEl.remove()
+        document.body.classList.add("show-after")
+        setTimeout(()=>{
+            document.body.classList.remove("show-after")
+
+        },1000)
+
     }, { once: true })
     console.log('123')
 }, { once: true })
+
+function killGlory(){
+    if(glory.healt <= 0){
+        loseIcon.classList.add("showLoseIcon")
+        document.body.classList.remove("show-bef")
+
+        clearInterval(id)
+    }
+}
+
+function showHp(el, charcter){
+    el.style.width = charcter.healt + '%'
+}
