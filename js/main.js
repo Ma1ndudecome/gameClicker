@@ -1,6 +1,6 @@
 const devInfo = document.querySelector(".DevWindow")
 
-const showButton = document.querySelector(".devShofEl")
+const showButton = document.querySelector(".dev")
 
 showButton.addEventListener("click", ()=>{
     devInfo.style.display = 'flex'

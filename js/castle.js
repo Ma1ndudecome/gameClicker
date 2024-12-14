@@ -25,20 +25,20 @@ class Warrior extends Character {
     constructor(name) {
         super(name)
     }
-    damage() {
+    damage(elDelete) {
         if (!imgSword.classList.contains("attack")) {
             this.healt -= 30
         }
         if(this.healt <=0){
             this.healt = 0
             this.isAlive = false
-            this.die()
+            this.die(elDelete)
             return
         }
        
     }
-    die() {
-        warriorContainer.remove()
+    die(elToDel) {
+        elToDel.remove()
     }
 }
 const glory = new Glory()
@@ -53,12 +53,15 @@ const invAdd = document.querySelector(".block")
 const buffEl = document.querySelector(".buff")
 const container = document.querySelector(".container")
 const loseIcon = document.querySelector(".lose")
+const spawnWarrior = document.querySelector(".spawn-warrior")
 let id
+let counterWarrior = 0
 function damageGlory(){
      id = setInterval(()=>{
         glory.damage()
         showHp(GloryHealth, glory)
-        document.body.classList.toggle("show-bef")
+       classListAddFunc(document.body, "show-bef")
+        document.body.classList.toggle("show-after-more")
         killGlory()
 
     },1500)
@@ -79,20 +82,32 @@ setInterval(() => {
     }
 }, 1300)
 
-warrior.addEventListener("click", createDamageWarrior)
+warrior.addEventListener("click", ()=>{
+    createDamageWarrior(warriroHealt,warriors,warriorContainer )
+})
 
 
-function createDamageWarrior() {
-    warriors.damage()
-    if (!warriors.isAlive) {
+function createDamageWarrior(warrior,character, deleteItem) {
+    
+
+    
+    character.damage(deleteItem)
+    if (!character.isAlive) {
+        counterWarrior +=1
+        if(counterWarrior === 2){
+            clearInterval(id)
+            classListRemoveFunc(document.body, "show-bef")
+            classListAddFunc(buff, "show")
+            return
+        }
         clearInterval(id)
-        classListRemoveFunc(document.body, "show-bef")
-
+        damageGlory()
         classListAddFunc(buff, "show")
+        createNewCharacter()
 
         return
     }
-    showHp(warriroHealt, warriors)
+    showHp(warrior, character)
 
 }
 
@@ -121,6 +136,8 @@ function killGlory(){
 
         classListRemoveFunc(document.body, "show-bef")
 
+        classListRemoveFunc(document.body, "show-after-more")
+
         clearInterval(id)
     }
 }
@@ -138,5 +155,31 @@ function classListRemoveFunc(el, clas){
 
 function createNewCharacter(){
     const zalman = new Warrior("Zalman");
+    spawnWarrior.insertAdjacentHTML("afterbegin", createMarkingForWarrior())
+    const newWarrior = spawnWarrior.querySelector(".warrior")
+    const helthWarr = document.querySelector(".health-warrior-item")
+    const warriorDude = document.querySelector(".warriorDude")
+    const NewwarriroHealt = document.querySelector(".health-warrior-item")
 
+    newWarrior.style.left = Math.floor(Math.random() * 50) + '%'
+    showHp(helthWarr, zalman)
+    
+    warriorDude.addEventListener("click", ()=>{
+        createDamageWarrior(NewwarriroHealt,zalman, newWarrior)
+        
+    } )
+
+
+
+
+}
+
+function createMarkingForWarrior(){
+    return `
+     <div class="warrior">
+            <div class="health-warrior">
+                <div class="health-warrior-item"></div>
+            </div>
+    <img src="../img/secondWarrior-unscreen.gif" alt="" class="warriorDude">
+    `
 }
