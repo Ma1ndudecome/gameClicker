@@ -8,6 +8,10 @@
     src: url(../fonts/Rimba.ttf);
 }
 
+@font-face {
+    font-family: HandFont;
+    src: url(../fonts/Hello_January_script_cyrillic_Script.otf);
+}
 
 body{
     margin: 0;
