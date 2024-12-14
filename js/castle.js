@@ -67,13 +67,14 @@ function damageGlory(){
 }
 damageGlory()
 container.addEventListener("click", () => {
-    imgSword.classList.add("attack");
+    classListAddFunc(imgSword, "attack")
    
 
 })
 setInterval(() => {
     if (imgSword.classList.contains("attack")) {
-        imgSword.classList.remove("attack")
+        classListRemoveFunc(imgSword, "attack")
+
         return
     }
 }, 1300)
@@ -85,8 +86,10 @@ function createDamageWarrior() {
     warriors.damage()
     if (!warriors.isAlive) {
         clearInterval(id)
-        document.body.classList.remove("show-bef")
-        buff.classList.add("show")
+        classListRemoveFunc(document.body, "show-bef")
+
+        classListAddFunc(buff, "show")
+
         return
     }
     showHp(warriroHealt, warriors)
@@ -94,15 +97,18 @@ function createDamageWarrior() {
 }
 
 buffEl.addEventListener("click", () => {
-    buffEl.classList.add("toInv");
+    classListAddFunc(buffEl, "toInv")
+
     invAdd.append(buffEl);
     buffEl.addEventListener("click", () => {
        glory.healt = Math.min(glory.healt + 30, 100)
         showHp(GloryHealth, glory)
         buffEl.remove()
-        document.body.classList.add("show-after")
+        // document.body.classList.add("show-after")
+        classListAddFunc(document.body, "show-after")
+
         setTimeout(()=>{
-            document.body.classList.remove("show-after")
+            classListRemoveFunc(document.body, "show-after")
 
         },1000)
 
@@ -113,7 +119,9 @@ buffEl.addEventListener("click", () => {
 function killGlory(){
     if(glory.healt <= 0){
         loseIcon.classList.add("showLoseIcon")
-        document.body.classList.remove("show-bef")
+        classListAddFunc(loseIcon, "showLoseIcon")
+
+        classListRemoveFunc(document.body, "show-bef")
 
         clearInterval(id)
     }
@@ -121,4 +129,11 @@ function killGlory(){
 
 function showHp(el, charcter){
     el.style.width = charcter.healt + '%'
+}
+
+function classListAddFunc(el, clas){
+    el.classList.add(clas)
+}
+function classListRemoveFunc(el, clas){
+    el.classList.remove(clas)
 }
