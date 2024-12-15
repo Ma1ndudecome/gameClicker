@@ -90,7 +90,7 @@ warrior.addEventListener("click", () => {
 })
 
 let counterInventory = 0
-
+let position = 0
 function createDamageWarrior(warrior, character, deleteItem) {
 
     character.damage(deleteItem)
@@ -111,8 +111,9 @@ function createDamageWarrior(warrior, character, deleteItem) {
         createBuffElement()
         if (createBuffElement) {
             const buffEl = buffContainer.querySelector(".buffEl")
+            const buff = buffContainer.querySelector(".buff")
             counterInventory += 1
-
+            buff.style.left = position
             buffEl.addEventListener("click", () => {
 
                 invAdd[counterInventory - 1].append(buffEl)
@@ -166,8 +167,8 @@ function createNewCharacter() {
     const helthWarr = document.querySelector(".health-warrior-item")
     const warriorDude = document.querySelector(".warriorDude")
     const NewwarriroHealt = document.querySelector(".health-warrior-item")
-
-    newWarrior.style.left = Math.floor(Math.random() * 40) + '%'
+    position = Math.floor(Math.random() * 40) + '%'
+    newWarrior.style.left = position
     showHp(helthWarr, zalman)
 
     warriorDude.addEventListener("click", () => {
