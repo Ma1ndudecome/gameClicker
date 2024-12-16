@@ -151,6 +151,17 @@ body.show-after::after {
 }
 
 /* helth */
+
+.container-health{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.Score{
+    font-size: 30px;
+    font-family: Wood;
+}
 .health {
     width: 250px;
     height: 50px;
@@ -233,7 +244,7 @@ body.show-after::after {
 
 /* buff style */
 .buff {
-    display: none;
+    
     position: absolute;
     bottom: 40px;
     left: 400px;
