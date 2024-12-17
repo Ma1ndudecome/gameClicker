@@ -21,10 +21,14 @@ body{
 }
 
 .MainBanner{
-    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 750px;
     background-image: url(../img/WelcomeWood.PNG);
     background-position: center;
-    background-size:  750px 150px;
+    background-size:  750px 160px;
     background-repeat: no-repeat;
 }
 /* ! Banner - Logo */
@@ -33,10 +37,10 @@ body{
     font-size: 35px;
     color: #deb887;
     text-shadow: 
-     5px  5px 10px black,  /*  Нижний - Справа */
-     5px -5px 10px #deb887,  /*  Нижний - Слева */
-    -5px  5px 10px black,  /* Верхний - Справа */
-    -5px -5px 10px black; /* Верхний - Слева */
+     5px  5px 10px black,  
+     5px -5px 10px #deb887,  
+    -5px  5px 10px black,  
+    -5px -5px 10px black; 
     h1{
         box-shadow: inset;
         margin: 0;
@@ -45,14 +49,10 @@ body{
         padding: 0;
     }
 }
-.show{
-    display: flex;
-
-}
 /* ! ButtonMenu */
 
 .ButtonMenu{
-    margin-top: 100px;
+    margin-top: 70px;
     div{
         background-image: url(../img/buttonWood.PNG);
         background-size: cover;
