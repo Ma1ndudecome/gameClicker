@@ -10,7 +10,7 @@ function damageGlory(){
     dirs.id = setTimeout(()=>{
         classListAddFunc(document.body, "show-bef")
         document.body.classList.toggle("show-after-more")
-        glory.damage(1)
+        glory.damage(15)
         dirs.GloryHealth.style.width = glory.hp + '%'
     }, 1500)
 }
