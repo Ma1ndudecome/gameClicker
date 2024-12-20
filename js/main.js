@@ -1,6 +1,14 @@
 const devInfo = document.querySelector(".DevWindow")
 const section = document.querySelector('.secti')
 const showButton = document.querySelector(".dev")
+const audio = document.getElementsByTagName("audio")
+const startDiv = document.querySelector('.start')
+
+startDiv.addEventListener("click", (event) =>{
+    startDiv.style.display = 'none'
+    audio[0].play()
+    audio[0].loop = true
+})
 
 showButton.addEventListener("click", ()=>{
     devInfo.style.display = 'flex'
@@ -13,4 +21,6 @@ window.addEventListener("keydown", (e)=>{
         devInfo.style.display = 'none'
     }
 })
+
+
 
