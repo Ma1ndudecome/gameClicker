@@ -15,7 +15,7 @@ showButton.addEventListener("click", ()=>{
     section.style.filter = 'blur(10px)'
 })
 
-window.addEventListener("keydown", (e)=>{
+document.addEventListener("keydown", (e)=>{
     if(e.key === 'q'){
         section.style.filter = 'blur(0)'
         devInfo.style.display = 'none'
