@@ -1,98 +1,163 @@
 body{
-    overflow: hidden;
-    background-image: url(../img/d7939848-efdb-405e-af58-b86cbe658c2f.jpg);
+    background-image: url(../img/Guilty\ Gear\ XX\ Background\ GIF.gif);
     background-repeat: no-repeat;
-    background-position: 0 80%;
+    background-position: center;
     background-size: cover;
-    padding-top: 50px;
-    padding-left: 25px;
     height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 50px;
 }
 
-/* ! HealtBar */
-.health{
-    display: flex;
-    align-items: center;
-    box-shadow: inset;
-    opacity: 80%;
-    width: 350px;
-    border-radius: 10px;
-    background-color: brown;
-    border: 2px solid  rgb(134, 119, 100);
-    img{
-        opacity: 85%;
-        margin: 5px;
-        width: 100px;
-        height: 100px;
-    }
-    img:hover{
-        transition-duration: 0.5s;
-        transform: scale(1.05);
-    }
-    p{
+
+/* ! HealthBar */
+.healthbar{
+    .divbank{
+        display: flex;
+        align-items: center;
         text-align: center;
-        font-size: 25px;
-        color: aliceblue;
-        opacity: 60%;
+        .back{
+            display: flex;
+            justify-content: center;
+            margin-left: 55px;
+            width: 330px;
+            height: 100px;
+            background-color: rgb(100, 51, 51);
+        }
+                p{
+                    /* position: absolute; */
+                    font-size: 30px;
+                    font-family: Dark;
+                    color: snow;
+                 }
+    }
+    .hpicon{
+        position: absolute;
+        width: 450px;
+        height: 200px;
     }
 }
 
-/* ! Invent */
-
-.inventory{
+.main-inv{
+    height: 80%;
     position: absolute;
-    z-index: 999;
-    top: 750px;
-    box-shadow: inset;
-    width: 300px;
-    height: 154px;
-    border: 4px solid rgb(77, 77, 21);
-    opacity: 70%;
-    border-radius: 3px;
-    .inventItem1{
-        display: flex;
-        div{
-            background-color: rgb(54, 48, 37);
-            border: 1px solid rgb(99, 84, 66);
-            width: 100px;
-            height: 75px;
-        }
-        div:hover{
-            cursor: pointer;
-            border-radius: 4px;
-            transition-duration: 0.5s;
-            transform: scale(1.1);
-            background-color: rgb(87, 74, 54);
-        }
-    }
-    .inventItem2{
-        display: flex;
-        div{
-            background-color: rgb(54, 48, 37);
-            border: 1px solid rgb(99, 84, 66);
-            width: 100px;
-            height: 75px;
-        }
-        div:hover{
-            cursor: pointer;
-            border-radius: 4px;
-            transition-duration: 0.5s;
-            transform: scale(1.1);
-            background-color: rgb(87, 74, 54);
-        }
-    }
-}
-
-/* ! Sword */
-
-.mainDiv{
     display: flex;
-    position: relative;
-    justify-content: center;
-    top: 380px;
-    height: 450px;
-    img{
-        box-shadow: inset;
+    align-items: end;
+}
 
+/* ! Inventory */
+.inventory{ 
+    margin-top: 50px;
+    margin-left: 30px;
+    .inventory-row1{
+        display: flex;
+        div{
+            box-shadow: rgb(92, 90, 90) 1px 1px 10px 1px;
+            margin: 2px;
+            background-color: rgb(131, 120, 105);
+            opacity: 85%;
+            border: 2px solid rgb(75, 67, 67);
+            border-radius: 30%;
+            width: 100px;
+            height: 70px;
+        }
+        div:hover{
+            cursor: pointer;
+            transition-duration: 0.6s;
+            transform: scale(1.07);
+        }
+    }
+    .inventory-row2{
+        display: flex;
+        div{
+            box-shadow: rgb(92, 90, 90) 1px 1px 10px 1px;
+            
+            margin: 2px;
+            background-color: rgb(131, 120, 105);
+            opacity: 85%;
+            border: 2px solid rgb(75, 67, 67);
+            border-radius: 30%;
+            width: 100px;
+            height: 70px;
+        }
+        div:hover{
+            cursor: pointer;
+            transition-duration: 0.6s;
+            transform: scale(1.07);
+        }
     }
 }
+
+
+/* ! Boss */
+.center-health-boss{
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.health-boss{
+    opacity: 75%;
+    position: absolute;
+    border: black 2px solid;
+    width: 600px;
+    background-color: rgb(119, 112, 112);
+
+    .back-health-color{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        background-color: rgb(139, 70, 70);
+        height: 50px;
+    }
+    p{ 
+        font-family: Wood;
+        color: snow;
+        font-size: 40px; 
+    }
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 90%;
+
+    .main-boss{
+        position: absolute;
+        img{
+            height: 550px;
+        }
+    }
+}
+
+
+.sword{
+    height: 5%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    img{
+        position: absolute;
+        height: 400px;
+        animation: 0.3s attack 0s 1 forwards linear
+    }
+}
+
+@keyframes attack {
+    0% {
+        transform: translateY(0px) translateX(400px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0px) translateX(400px) rotate(60deg);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(400px) rotate(0deg);
+    }
+}
+
+/* rgb(100, 51, 51) */
+
+

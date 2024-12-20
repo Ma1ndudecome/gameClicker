@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Cartograph CF"
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 12
 }
