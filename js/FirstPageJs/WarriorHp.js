@@ -11,14 +11,15 @@ function killWarrior(el, warrior){
 
     dirs.counterWarrior += 1
     dirs.score += 38;
+    localStorage.setItem("score", dirs.score)
     dirs.scoreI.textContent = dirs.score
     if(dirs.counterWarrior === 3){
         clearTimeout(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
-        setTimeout(()=>{
-            location.href = "./master.html"
-        },5000)
+        // setTimeout(()=>{
+        //     location.href = "./master.html"
+        // },5000)
         return
     }
 
@@ -27,7 +28,6 @@ function killWarrior(el, warrior){
 function damageKillWarrior(el, healthWarrior, containerWarrior, warrior){
     el.obs.subscribe((event)=>{
         if(event === "damage"){
-            console.log('neww')
             damageWarrior(healthWarrior, warrior)
         }else if(event === "kill"){
             killWarrior(containerWarrior, warrior)

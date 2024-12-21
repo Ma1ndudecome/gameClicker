@@ -17,4 +17,5 @@ const dirs = {
     randomPosition:22,
     scoreI:document.querySelector(".ScoreItem"),
     score:0,
+    counterBuff:0
 }
