@@ -119,34 +119,67 @@ body.show-after::after {
 .lose {
     opacity: 0;
     visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.681);
-    z-index: 999;
-    transition: 0.3s;
+    z-index: 100;
 }
 
 .lose-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 60%;
-    background-color: rgba(122, 122, 122, 0.779);
-    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(145deg, #3a3a3a, #1f1f1f);
+    border: 2px solid #5a1a1a;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.lose-block h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .lose-block a {
-    color: black;
-    font-size: 30px;
-    background-color: lightblue;
-    padding: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #6a1a1a, #3a0a0a);
+    border: 2px solid #ff0000;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.lose-block a:hover {
+    background: linear-gradient(145deg, #ff1a1a, #8b0000);
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Дополнительный текст и иконка проигрыша */
+.lose-block p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffcccc;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.lose-block .icon {
+    font-size: 64px;
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .showLoseIcon {

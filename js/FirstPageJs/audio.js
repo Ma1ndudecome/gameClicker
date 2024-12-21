@@ -10,6 +10,8 @@ drinkSound.src = "../audio/drinkPotion.mp3";
 const healSound = document.createElement("audio");
 healSound.src = "../audio/healSound.mp3";
 
+const loseSound = document.createElement("audio")
+loseSound.src = "../audio/lose.mp3"
 
 
 

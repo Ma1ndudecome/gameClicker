@@ -30,5 +30,6 @@ function BuffAddHealt(e){
     }, 1000)
     glory.addHp(30)
     dirs.GloryHealth.style.width = glory.hp + "%"
+    localStorage.setItem("hpGlory", dirs.GloryHealth.style.width)
 }
 
