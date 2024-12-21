@@ -9,13 +9,14 @@ function spawnNewBuff(){
 
 function insertBuffEl(){
     dirs.buffContainer.insertAdjacentHTML("afterbegin", createBuffMarking())
+    localStorage.setItem("potion", createBuffMarking())
+    dirs.counterBuff += 1
+    localStorage.setItem("counterBuff", dirs.counterBuff)
+
 }
 
 function createBuffMarking(){
-    return`
-    <div class="buff">
-        <img src="../img/buff.gif" alt="" class="buffEl">
-    </div>
+    return`<div class="buff"><img src="../img/buff.gif" alt="" class="buffEl"></div>
     `
 }
 

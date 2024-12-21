@@ -12,7 +12,7 @@ function damageGlory(){
         document.body.classList.toggle("show-after-more")
         glory.damage(1)
         dirs.GloryHealth.style.width = glory.hp + '%'
-        localStorage.setItem("hpGlory", el.style.width)
+        localStorage.setItem("hpGlory", dirs.GloryHealth.style.width)
 
     }, 1500)
 }

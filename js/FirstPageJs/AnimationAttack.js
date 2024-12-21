@@ -1,7 +1,7 @@
 dirs.container.addEventListener("click", ()=>{
     classListAddFunc(dirs.imgSword, "attack")
    if(dirs.imgSword.classList.contains("attack")){
-    audioHit.play()
+    
    }
     
 })
