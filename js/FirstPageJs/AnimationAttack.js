@@ -9,5 +9,5 @@ dirs.container.addEventListener("click", ()=>{
 setInterval(()=>{
     classListRemoveFunc(dirs.imgSword, "attack")
     
-}, 1300)
+}, 900)
 
