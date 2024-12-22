@@ -13,5 +13,8 @@ healSound.src = "../audio/healSound.mp3";
 const loseSound = document.createElement("audio")
 loseSound.src = "../audio/lose.mp3"
 
+function audioPlay(audio){
+    audio.play()
+}
 
 

@@ -331,6 +331,10 @@ body.show-after::after {
 .buffEl {
     width: 100%;
     height: 100%;
+    transition: 0.5s;
+}
+.buffEl:active{
+    transform: scale(1.1);
 }
 
 /* show buff */
@@ -353,6 +357,10 @@ body.show-after::after {
     width: 400px;
     user-select: none;
     cursor: pointer;
+    transition: 0.5s;
+}
+.warrior img:active{
+    transform: scale(0.7);
 }
 
 .health-warrior {

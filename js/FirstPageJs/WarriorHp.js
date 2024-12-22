@@ -7,13 +7,14 @@ function damageWarrior(el, warrior){
 function killWarrior(el, warrior){
     el.remove()
     warrior.die()
-    deadSound.play()
+    audioPlay(deadSound)
+
 
     dirs.counterWarrior += 1
     dirs.score += 38;
     localStorage.setItem("score", dirs.score)
     dirs.scoreI.textContent = dirs.score
-    if(dirs.counterWarrior === 3){
+    if(dirs.counterWarrior === 5){
         clearTimeout(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
@@ -40,7 +41,8 @@ function clickDamage(el, warrior){
     el.addEventListener("click", ()=>{
         if(!dirs.imgSword.classList.contains("attack")){
             warrior.damage(25)
-            audioHitWarrior.play()
+            audioPlay(audioHitWarrior)
+
         }
         
     })
