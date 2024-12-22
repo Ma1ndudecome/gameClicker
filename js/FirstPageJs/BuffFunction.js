@@ -22,8 +22,8 @@ function BuffAddHealt(e){
     e.currentTarget.remove()
     dirs.counterBuff -= 1
     localStorage.setItem("counterBuff", dirs.counterBuff)
-    drinkSound.play()
-    healSound.play()
+    audioPlay(drinkSound)
+    audioPlay(healSound)
     classListAddFunc(document.body, "show-after")
     setTimeout(() => {
         classListRemoveFunc(document.body, "show-after")
