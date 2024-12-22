@@ -3,7 +3,7 @@ const glory = new Glory()
 function killGlory(){
     clearInterval(dirs.id)
     classListAddFunc(dirs.loseIcon, "showLoseIcon")
-    loseSound.play()
+    audioPlay(loseSound)
 }
 
 

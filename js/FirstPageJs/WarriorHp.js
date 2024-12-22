@@ -7,7 +7,8 @@ function damageWarrior(el, warrior){
 function killWarrior(el, warrior){
     el.remove()
     warrior.die()
-    deadSound.play()
+    audioPlay(deadSound)
+
 
     dirs.counterWarrior += 1
     dirs.score += 38;

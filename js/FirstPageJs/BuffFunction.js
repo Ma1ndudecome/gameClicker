@@ -4,6 +4,7 @@ function BuffFunction(){
 }
 
 function BuffAddToInventory(e){
+    dirs.counterBuff += 1
     for(let i=0; i < dirs.invAdd.length; i += 1){
         if(dirs.invAdd[i].classList.contains("free")){
             classListAddFunc(dirs.buffContainer.querySelector(".buff"), "toInv")
@@ -22,6 +23,12 @@ function BuffAddHealt(e){
     e.currentTarget.remove()
     dirs.counterBuff -= 1
     localStorage.setItem("counterBuff", dirs.counterBuff)
+    healWarrior()
+}
+
+
+
+function healWarrior(){
     audioPlay(drinkSound)
     audioPlay(healSound)
     classListAddFunc(document.body, "show-after")
@@ -32,4 +39,3 @@ function BuffAddHealt(e){
     dirs.GloryHealth.style.width = glory.hp + "%"
     localStorage.setItem("hpGlory", dirs.GloryHealth.style.width)
 }
-

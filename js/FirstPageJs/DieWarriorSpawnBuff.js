@@ -10,7 +10,6 @@ function spawnNewBuff(){
 function insertBuffEl(){
     dirs.buffContainer.insertAdjacentHTML("afterbegin", createBuffMarking())
     localStorage.setItem("potion", createBuffMarking())
-    dirs.counterBuff += 1
     localStorage.setItem("counterBuff", dirs.counterBuff)
 
 }
