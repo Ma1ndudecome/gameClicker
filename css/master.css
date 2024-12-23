@@ -93,7 +93,7 @@ body{
 .center-health-boss{
     display: flex;
     justify-content: center;
-    height: 70%;
+    height: 90%;
 }
 
 .health-boss{
@@ -140,21 +140,25 @@ main{
     img{
         position: absolute;
         height: 400px;
-        animation: 0.3s attack 0s 1 forwards linear
+        right: 300px;
+
     }
 }
+.attackAnim{
+    animation: 0.3s attack 0s 1 forwards linear;
 
+}
 @keyframes attack {
-    0% {
-        transform: translateY(0px) translateX(400px) rotate(0deg);
-    }
 
     50% {
-        transform: translateY(0px) translateX(400px) rotate(60deg);
+        right:380px;
+        transform: scale(0.8);
     }
 
     100% {
-        transform: translateY(0px) translateX(400px) rotate(0deg);
+        right:300px;
+        transform: scale(1);
+
     }
 }
 
