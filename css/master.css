@@ -7,6 +7,7 @@ body{
     overflow: hidden;
     margin: 0;
     padding: 50px;
+    position: relative;
 }
 
 
@@ -44,12 +45,23 @@ body{
 
 }
 .main-inv{
-    height: 80%;
+    height: 70%;
+
     position: absolute;
     display: flex;
     align-items: end;
 }
-
+/* buff */
+.buff{
+    position: absolute;
+    z-index: 2;
+    animation: drop 5s 0s forwards linear;
+    cursor: pointer;
+}
+.buff img{
+    width: 100px;
+    height: 100px;
+}
 /* ! Inventory */
 .inventory{ 
     margin-top: 50px;
@@ -181,6 +193,12 @@ main{
         right:300px;
         transform: scale(1);
 
+    }
+}
+
+@keyframes drop{
+    100%{
+        top:100%
     }
 }
 

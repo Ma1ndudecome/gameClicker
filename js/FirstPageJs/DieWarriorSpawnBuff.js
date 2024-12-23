@@ -14,8 +14,7 @@ function insertBuffEl(){
 }
 
 function createBuffMarking(){
-    return`<div class="buff"><img src="../img/buff.gif" alt="" class="buffEl"></div>
-    `
+    return`<div class="buff"><img src="../img/buff.gif" alt="" class="buffEl"></div>`
 }
 
 
