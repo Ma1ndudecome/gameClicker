@@ -5,6 +5,8 @@ dirs.mainSection.addEventListener("click", ()=>{
 function delayAnimAttack(){
     setInterval(()=>{
     classListRemoveFunc(dirs.sword, "attackAnim")
+    classListRemoveFunc(dirs.bossItem, "damage")
+
     },800)
 }
 delayAnimAttack()

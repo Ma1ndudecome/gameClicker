@@ -7,11 +7,13 @@ dirs.bossItem.addEventListener("click", ()=>{
 })
 function damageBoss(){
     showBossHp()
+    classListAddFunc(dirs.bossItem, "damage")
 }
 function killBoss(){
     showBossHp()
     dirs.bossItem.remove()
     dirs.healthBoss.remove()
+    clearTimeout(dirs.intervalId)
 }
 boss.hpObs.subscribe((event)=>{
     if(event === "damage"){
@@ -28,6 +30,6 @@ function pixelstoproccents(num1Px, num2){
 }
 
 function showBossHp(){
-dirs.healthBossText.textContent = boss.hp
+    dirs.healthBossText.textContent = boss.hp
     dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 300) + "%"
 }

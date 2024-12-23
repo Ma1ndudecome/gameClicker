@@ -18,17 +18,17 @@ body{
         text-align: center;
         .back{
             display: flex;
-            justify-content: center;
             margin-left: 55px;
             width: 330px;
             height: 100px;
-            background-color: rgb(100, 51, 51);
+            position: relative;
         }
                 p{
-                    /* position: absolute; */
+                    position: absolute;
                     font-size: 30px;
                     font-family: Dark;
                     color: snow;
+                    left:47%
                  }
     }
     .hpicon{
@@ -37,7 +37,12 @@ body{
         height: 200px;
     }
 }
+.backItem{
+    width: 100%;
+    background-color: rgb(100, 51, 51);
+    height: 100%;
 
+}
 .main-inv{
     height: 80%;
     position: absolute;
@@ -152,6 +157,18 @@ main{
 .attackAnim{
     animation: 0.3s attack 0s 1 forwards linear;
 
+}
+.damage{
+    animation: 0.2s damage 0s 1 forwards linear;
+}
+
+@keyframes damage{
+    50%{
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        transform: translateY(0px) scale(1);
+    }
 }
 @keyframes attack {
 
