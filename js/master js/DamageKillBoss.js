@@ -14,6 +14,7 @@ function killBoss(){
     dirs.bossItem.remove()
     dirs.healthBoss.remove()
     clearTimeout(dirs.intervalId)
+    clearTimeout(dirs.spawnInterval)
 }
 boss.hpObs.subscribe((event)=>{
     if(event === "damage"){

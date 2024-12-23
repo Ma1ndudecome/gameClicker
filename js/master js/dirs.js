@@ -7,5 +7,6 @@ const dirs = {
     healthBoss:document.querySelector(".health-boss"),
     intervalId:0,
     hpBar:document.querySelector(".backItem"),
-    hpBarText:document.querySelector(".back>p")
+    hpBarText:document.querySelector(".back>p"),
+    spawnInterval:0,
 }

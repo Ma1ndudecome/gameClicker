@@ -21,9 +21,9 @@ function spawnBuff(){
 
 
 function spawn(){
-    setInterval(()=>{
+    dirs.spawnInterval = setInterval(()=>{
         spawnBuff()
-    },4000)
+    },6000)
 }
 
 spawn()
