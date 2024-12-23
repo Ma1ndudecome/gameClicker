@@ -5,6 +5,7 @@ function BuffFunction(){
 
 function BuffAddToInventory(e){
     dirs.counterBuff += 1
+    localStorage.setItem("counterBuff", dirs.counterBuff)
     for(let i=0; i < dirs.invAdd.length; i += 1){
         if(dirs.invAdd[i].classList.contains("free")){
             classListAddFunc(dirs.buffContainer.querySelector(".buff"), "toInv")
