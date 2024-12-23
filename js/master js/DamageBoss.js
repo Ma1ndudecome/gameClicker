@@ -1,16 +1,17 @@
 const boss = new Boss()
 
 dirs.bossItem.addEventListener("click", ()=>{
-    boss.damage(20)
+    if(!dirs.sword.classList.contains("attackAnim")){
+        boss.damage(20)
+    }
 })
 function damageBoss(){
-    dirs.healthBossText.textContent = boss.hp
-    dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 300) + "%"
+    showBossHp()
 }
 function killBoss(){
-    dirs.healthBossText.textContent = boss.hp
-    dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 600) + "%"
-
+    showBossHp()
+    dirs.bossItem.remove()
+    dirs.healthBoss.remove()
 }
 boss.hpObs.subscribe((event)=>{
     if(event === "damage"){
@@ -26,3 +27,7 @@ function pixelstoproccents(num1Px, num2){
     return num1Px.toFixed(0)
 }
 
+function showBossHp(){
+dirs.healthBossText.textContent = boss.hp
+    dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 300) + "%"
+}
