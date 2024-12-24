@@ -115,7 +115,7 @@ body{
 }
 .main-inv{
     height: 70%;
-
+z-index: 2;
     position: absolute;
     display: flex;
     align-items: end;
@@ -180,6 +180,12 @@ body{
     display: flex;
     justify-content: center;
     height: 90%;
+    position: absolute;
+    top:30%;
+    animation: 5s moveBoss 0s infinite  linear;
+    gap: 100px;
+
+    
 }
 
 .health-boss{
@@ -189,6 +195,8 @@ body{
     border: black 2px solid;
     width: 600px;
     background-color: rgb(119, 112, 112);
+    
+
 
     .back-health-color{
         display: flex;
@@ -216,6 +224,7 @@ main{
 
     .main-boss{
         position: absolute;
+
         img{
             height: 550px;
         }
@@ -264,10 +273,53 @@ main{
 
     }
 }
-
+.dieBoss{
+    animation: 1s dieBoss 0s 1 forwards linear;
+    
+}
 @keyframes drop{
     100%{
         top:100%
+    }
+}
+
+@keyframes dieBoss{
+    50%{
+        transform: scale(0.3);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+@keyframes moveBoss {
+    0%{
+        left:0%
+    }
+    10%{
+        left:10%
+    }
+    60%{
+        left:20%
+    } 60%{
+        left:30%
+    } 60%{
+        left:40%
+    } 60%{
+        left:50%
+    } 60%{
+        left:40%
+    } 70%{
+        left:30%
+    }
+    80%{
+        left:20%
+    }
+    90%{
+        left:10%
+    }
+    100%{
+        left:0%
     }
 }
 

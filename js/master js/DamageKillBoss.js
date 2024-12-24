@@ -11,8 +11,11 @@ function damageBoss(){
 }
 function killBoss(){
     showBossHp()
-    dirs.bossItem.remove()
-    dirs.healthBoss.remove()
+    dirs.bossItem.classList.add("dieBoss")
+    setTimeout(() => {
+        dirs.bossItem.remove()
+        dirs.healthBoss.remove()
+    }, 2000);
     clearTimeout(dirs.intervalId)
     clearTimeout(dirs.spawnInterval)
 }
