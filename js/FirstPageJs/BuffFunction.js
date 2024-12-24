@@ -37,6 +37,7 @@ function healWarrior(){
         classListRemoveFunc(document.body, "show-after")
     }, 1000)
     glory.addHp(30)
-    dirs.GloryHealth.style.width = glory.hp + "%"
+    styleHpBarWidth(dirs.GloryHealth, glory.hp)
+    // dirs.GloryHealth.style.width = glory.hp + "%"
     localStorage.setItem("hpGlory", dirs.GloryHealth.style.width)
 }
