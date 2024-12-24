@@ -8,13 +8,17 @@ glory.obsHp.subscribe((e) => {
 })
 function damageGlory() {
     dirs.intervalId = setTimeout(() => {
-        console.log(glory.hp);
         glory.damage(1);
-        dirs.hpBar.style.width = glory.hp + "%";
-        dirs.hpBarText.textContent = glory.hp;
-        document.body.classList.add('showBef')
+        styleHpBarWidth(dirs.hpBar, glory.hp)
+        // dirs.hpBar.style.width = glory.hp + "%";
+        styleHpBarTextContent(dirs.hpBarText, glory.hp)
+        // dirs.hpBarText.textContent = glory.hp;
+        classListAddFunc(document.body, "showBef")
+        // document.body.classList.add('showBef')
        setTimeout(()=>{
-        document.body.classList.remove('showBef')
+        classListRemoveFunc(document.body, "showBef")
+
+        // document.body.classList.remove('showBef')
         },1000)
     }, 3000)
 }
@@ -22,7 +26,8 @@ function damageGlory() {
 function killGlory(){
     clearTimeout(dirs.intervalId)
     clearInterval(dirs.spawnInterval)
-    dirs.loseIcon.classList.add("showLoseIcon")
+    classListAddFunc(dirs.loseIcon, "showLoseIcon")
+    // dirs.loseIcon.classList.add("showLoseIcon")
 }
 glory.damage(0)
 

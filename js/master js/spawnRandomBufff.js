@@ -12,6 +12,7 @@ function spawnBuff(){
         e.target.remove()
         healGlory()
     },{once:true})
+    
     setTimeout(()=>{
         buff.remove()
     },5000)

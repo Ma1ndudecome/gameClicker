@@ -15,7 +15,8 @@ function damageBoss(){
 }
 function killBoss(){
     showBossHp()
-    dirs.bossContainer.classList.add("dieBoss")
+    classListAddFunc(dirs.bossContainer, "dieBoss")
+    // dirs.bossContainer.classList.add("dieBoss")
     setTimeout(() => {
         dirs.bossItem.remove()
         dirs.healthBoss.remove()
@@ -41,6 +42,9 @@ function pixelstoproccents(num1Px, num2){
 }
 
 function showBossHp(){
-    dirs.healthBossText.textContent = boss.hp
-    dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 300) + "%"
+    styleHpBarTextContent(dirs.healthBossText, boss.hp)
+    styleHpBarWidth(dirs.healthBossItem, pixelstoproccents(boss.hp, 300))
+    // dirs.healthBossText.textContent = boss.hp
+    // dirs.healthBossItem.style.width = pixelstoproccents(boss.hp, 300) + "%"
+    
 }
