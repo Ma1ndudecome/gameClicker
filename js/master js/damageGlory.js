@@ -9,7 +9,7 @@ glory.obsHp.subscribe((e) => {
 function damageGlory() {
     dirs.intervalId = setTimeout(() => {
         console.log(glory.hp);
-        glory.damage(11);
+        glory.damage(20);
         dirs.hpBar.style.width = glory.hp + "%";
         dirs.hpBarText.textContent = glory.hp;
     }, 1900)
@@ -17,6 +17,8 @@ function damageGlory() {
 
 function killGlory(){
     clearTimeout(dirs.intervalId)
+    clearInterval(dirs.spawnInterval)
+    dirs.loseIcon.classList.add("showLoseIcon")
 }
-glory.damage(1)
+glory.damage(0)
 
