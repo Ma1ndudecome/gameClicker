@@ -18,9 +18,9 @@ function killWarrior(el, warrior){
         clearTimeout(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
-        // setTimeout(()=>{
-        //     location.href = "./master.html"
-        // },5000)
+        setTimeout(()=>{
+            location.href = "./master.html"
+        },5000)
         return
     }
 

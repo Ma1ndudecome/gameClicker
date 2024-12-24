@@ -9,10 +9,10 @@ glory.obsHp.subscribe((e) => {
 function damageGlory() {
     dirs.intervalId = setTimeout(() => {
         console.log(glory.hp);
-        glory.damage(1);
+        glory.damage(40);
         dirs.hpBar.style.width = glory.hp + "%";
         dirs.hpBarText.textContent = glory.hp;
-    }, 1900)
+    }, 3000)
 }
 
 function killGlory(){

@@ -11,7 +11,7 @@ function damageBoss(){
 }
 function killBoss(){
     showBossHp()
-    dirs.bossItem.classList.add("dieBoss")
+    dirs.bossContainer.classList.add("dieBoss")
     setTimeout(() => {
         dirs.bossItem.remove()
         dirs.healthBoss.remove()
