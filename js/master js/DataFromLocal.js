@@ -6,6 +6,10 @@ function showsavedHp(){
         dirs.hpBar.style.width = glory.hp + "%";
         dirs.hpBarText.textContent = glory.hp;
         
+
+        if(boss.Alive === "false"){
+            dirs.bossContainer.remove()
+        }
     }
 }
 showsavedHp()

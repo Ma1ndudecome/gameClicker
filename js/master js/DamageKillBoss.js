@@ -1,5 +1,9 @@
 const boss = new Boss()
 
+
+
+boss.Alive = localStorage.getItem("aliveBoss")
+
 dirs.bossItem.addEventListener("click", ()=>{
     if(!dirs.sword.classList.contains("attackAnim")){
         boss.damage(20)
@@ -19,6 +23,7 @@ function killBoss(){
     clearTimeout(dirs.intervalId)
     clearTimeout(dirs.spawnInterval)
     localStorage.setItem("hpGlory", dirs.hpBar.style.width)
+    localStorage.setItem("aliveBoss", boss.Alive)
 
 }
 boss.hpObs.subscribe((event)=>{
