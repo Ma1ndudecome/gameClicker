@@ -18,6 +18,8 @@ function killBoss(){
     }, 2000);
     clearTimeout(dirs.intervalId)
     clearTimeout(dirs.spawnInterval)
+    localStorage.setItem("hpGlory", dirs.hpBar.style.width)
+
 }
 boss.hpObs.subscribe((event)=>{
     if(event === "damage"){
