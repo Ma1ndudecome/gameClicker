@@ -10,5 +10,6 @@ const dirs = {
     hpBarText:document.querySelector(".back>p"),
     spawnInterval:0,
     loseIcon:document.querySelector(".lose"),
-    bossContainer:document.querySelector(".center-health-boss")
+    bossContainer:document.querySelector(".center-health-boss"),
+    intervalDamage:0
 }

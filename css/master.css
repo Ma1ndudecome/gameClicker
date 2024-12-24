@@ -9,7 +9,32 @@ body{
     padding: 50px;
     position: relative;
 }
-
+body::before{
+    opacity: 0;
+    content: '';
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-image: linear-gradient(0deg,
+    hsla(0, 0%, 100%, 0) 9%,
+    hsla(0, 47%, 97%, 0) 32%,
+    hsla(0, 47%, 94%, 0) 39%,
+    rgba(241, 218, 218, 0) 44%,
+    rgba(236, 202, 202, 0) 47%,
+    hsla(0, 86%, 59%, 0) 50%,
+    hsla(0, 86%, 62%, 0.1) 53%,
+    hsla(0, 86%, 62%, 0.1) 55%,
+    hsla(0, 86%, 62%, 0.2) 59%,
+    hsla(0, 86%, 62%, 0.3) 63%,
+    hsla(0, 86%, 62%, 0.4) 70%,
+    hsla(0, 86%, 62%, 0.5) 91%);
+    transition: 0.5s;
+}
+body.showBef::before{
+    opacity: 1;
+}
 .lose {
     opacity: 0;
     visibility: hidden;

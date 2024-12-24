@@ -12,6 +12,10 @@ function damageGlory() {
         glory.damage(1);
         dirs.hpBar.style.width = glory.hp + "%";
         dirs.hpBarText.textContent = glory.hp;
+        document.body.classList.add('showBef')
+       setTimeout(()=>{
+        document.body.classList.remove('showBef')
+        },1000)
     }, 3000)
 }
 
