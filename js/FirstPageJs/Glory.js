@@ -1,5 +1,4 @@
-import {ObserverGloryHp} from "./ObserverHpKillGlory.js"
-export class Glory{
+class Glory{
     constructor(){
         this.hp = 100;
         this.obsHp = new ObserverGloryHp();
@@ -12,6 +11,8 @@ export class Glory{
             return
         }
         this.obsHp.broadcast("damage")
+       
+
     }
     addHp(value){
         this.hp = Math.min(this.hp + value, 100)

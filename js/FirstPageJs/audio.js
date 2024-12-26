@@ -16,5 +16,3 @@ loseSound.src = "../audio/lose.mp3"
 function audioPlay(audio){
     audio.play()
 }
-
-

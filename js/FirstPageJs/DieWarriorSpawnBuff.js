@@ -1,4 +1,3 @@
-
 function spawnNewBuff(){
     if(dirs.buffContainer.children.length !== 0){
         return
