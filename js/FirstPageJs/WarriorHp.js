@@ -13,14 +13,15 @@ function killWarrior(el, warrior){
     dirs.counterWarrior += 1
     dirs.score += 38;
     localStorage.setItem("score", dirs.score)
-    dirs.scoreI.textContent = dirs.score
+    // dirs.scoreI.textContent = dirs.score
+    styleHpBarTextContent(dirs.scoreI, dirs.score)
     if(dirs.counterWarrior === 5){
         clearTimeout(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
-        // setTimeout(()=>{
-        //     location.href = "./master.html"
-        // },5000)
+        setTimeout(()=>{
+            location.href = "./master.html"
+        },5000)
         return
     }
 

@@ -11,6 +11,8 @@ class Glory{
             return
         }
         this.obsHp.broadcast("damage")
+       
+
     }
     addHp(value){
         this.hp = Math.min(this.hp + value, 100)
