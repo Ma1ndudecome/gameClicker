@@ -1,4 +1,6 @@
-function BuffFunction(){
+import { dirs } from "./dirs";
+import { classListAddFunc, styleHpBarWidth, classListRemoveFunc } from "./BaseFunc";
+export function BuffFunction(){
    dirs.buffContainer.querySelector(".buff").addEventListener("click",BuffAddToInventory,{once:true})
    dirs.buffContainer.querySelector(".buff").style.left = dirs.randomPosition + "%"
 }

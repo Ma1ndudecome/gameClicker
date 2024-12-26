@@ -1,8 +1,7 @@
-class ObserverGloryHp{
+export class ObserverGloryHp{
     constructor(){
         this.subscribers = []
     }
-
     subscribe(func){
         this.subscribers.push(func)
     }
@@ -12,5 +11,4 @@ class ObserverGloryHp{
     broadcast(data){
         this.subscribers.forEach(el=>el(data))
     }
-
 }

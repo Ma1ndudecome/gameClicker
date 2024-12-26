@@ -1,3 +1,5 @@
+import {dirs} from "./dirs.js"
+import { styleHpBarTextContent, classListRemoveFunc } from "./BaseFunc.js";
 const warrior = new Warrior()
 
 function damageWarrior(el, warrior){
