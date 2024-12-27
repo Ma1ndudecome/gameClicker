@@ -12,11 +12,15 @@ export function statusSaved(){
     }
     if(localStorage.getItem("isAliveLastWarrior") === 'false'){
         dirs.warriorContainer.remove()
-        console.log(dirs.id)
-       
         clearInterval(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
+    }
+    if(localStorage.getItem("counterWarrior")){
+        dirs.counterWarrior = Number(localStorage.getItem("counterWarrior"))
+    }
+    if(Number(localStorage.getItem("counterBuff")) !== 0){
+        Number(localStorage.getItem("counterBuff"))
     }
    
 

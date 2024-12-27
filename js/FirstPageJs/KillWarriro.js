@@ -15,6 +15,7 @@ export function killWarrior(el, warrior){
     dirs.score += 38
     localStorage.setItem("score", dirs.score)
     styleHpBarTextContent(dirs.scoreI, dirs.score)
+    localStorage.setItem("counterWarrior", dirs.counterWarrior)
     if(dirs.counterWarrior === 5){
         localStorage.setItem("isAliveLastWarrior", warriorItems.isAlive)
         
