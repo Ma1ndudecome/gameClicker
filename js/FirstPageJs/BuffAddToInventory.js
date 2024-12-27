@@ -25,7 +25,9 @@ function buffAddToInventory(e){
     localStorage.setItem("counterBuff", dirs.counterBuff)
 }
 
-function buffAddHealt(e){
+export function buffAddHealt(e){
+    
+    
     e.currentTarget.parentNode.classList.add("free")
     e.currentTarget.remove()
     dirs.counterBuff -= 1
