@@ -1,4 +1,3 @@
-
 const glory = new Glory()
 
 function killGlory(){

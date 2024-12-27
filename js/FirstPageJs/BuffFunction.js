@@ -41,4 +41,3 @@ function BuffFunction(){
      // dirs.GloryHealth.style.width = glory.hp + "%"
      localStorage.setItem("hpGlory", dirs.GloryHealth.style.width)
  }
- 
