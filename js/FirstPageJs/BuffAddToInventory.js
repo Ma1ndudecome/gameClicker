@@ -16,6 +16,8 @@ function buffAddToInventory(e){
             dirs.invAdd[i].append(e.target.parentNode)
             dirs.invAdd[i].querySelector(".buff").addEventListener("click", buffAddHealt, {once:true})
             dirs.counterInventroy = i
+            dirs.indexMas.push(i)
+            localStorage.setItem("masIndex", dirs.indexMas)
             break
         }
     }

@@ -3,6 +3,10 @@ import { glory } from './DamageGlory.js'
 import { stylehpBarWidth, classListRemoveFunc } from "./BaseFunc.js";
 
 export function statusSaved(){
+    if(localStorage.getItem("masIndex")){
+       dirs.indexMas =  localStorage.getItem("masIndex").split(',').map(el=>Number(el))
+       console.log(dirs.indexMas)
+    }
     if(localStorage.getItem("hpGlory")){
         glory.hp = Number(localStorage.getItem("hpGlory"))
         stylehpBarWidth(dirs.GloryHealth, glory.hp)
