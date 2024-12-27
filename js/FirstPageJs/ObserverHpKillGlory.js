@@ -1,4 +1,4 @@
-class ObserverGloryHp{
+export class ObserverGloryHp{
     constructor(){
         this.subscribers = []
     }

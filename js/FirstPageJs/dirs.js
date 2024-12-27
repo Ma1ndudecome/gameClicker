@@ -1,4 +1,4 @@
-const dirs = {
+export const dirs = {
     buff: document.querySelector(".buff"),
     imgSword: document.querySelector(".img"),
     warrior: document.querySelector(".warriorDude"),
