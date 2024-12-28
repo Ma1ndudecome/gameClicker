@@ -1,4 +1,4 @@
-const dirs = {
+export const dirs = {
     sword:document.querySelector(".sword>img"),
     mainSection:document.querySelector(".Mainsection"),
     bossItem:document.querySelector(".main-boss>img"),
