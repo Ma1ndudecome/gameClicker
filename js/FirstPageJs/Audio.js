@@ -10,4 +10,6 @@ export const lose = new Audio("../audio/lose.mp3")
 
 export const pickUp = new Audio("../audio/pickUp.mp3")
 
+export const soundDragon = new Audio("../audio/dracon.mp3")
 
+export const soundDamageGragon = new Audio("../audio/dragonDamage.mp3")
