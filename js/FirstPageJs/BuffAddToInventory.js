@@ -2,7 +2,7 @@ import { healWarrior } from "./HealWarrior.js";
 import { dirs } from "./dirs.js";
 import { classListAddFunc, classListRemoveFunc } from "./BaseFunc.js";
 import { createBuffMarking } from "./spawnBuff.js";
-import { soundDringPotion, soundHeal } from "./audio.js";
+import { soundDringPotion, soundHeal, pickUp } from "./audio.js";
 import { playAudio } from "./playAudio.js";
 export function buffFunction(){
     dirs.buffContainer.querySelector(".buff").addEventListener("click", buffAddToInventory, {once:true})
@@ -10,7 +10,7 @@ export function buffFunction(){
 
 function buffAddToInventory(e){
     dirs.counterBuff += 1
-
+    playAudio(pickUp)
     for(let i =0; i < dirs.invAdd.length; i+=1){
         if(dirs.invAdd[i].classList.contains("free")){
             classListAddFunc(dirs.buffContainer.querySelector(".buff"), "toInv")
