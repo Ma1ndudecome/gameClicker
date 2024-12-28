@@ -8,6 +8,7 @@ body{
     margin: 0;
     padding: 50px;
     position: relative;
+    user-select: none;
 }
 body::before{
     opacity: 0;
