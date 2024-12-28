@@ -2,6 +2,8 @@ import { healWarrior } from "./HealWarrior.js";
 import { dirs } from "./dirs.js";
 import { classListAddFunc, classListRemoveFunc } from "./BaseFunc.js";
 import { createBuffMarking } from "./spawnBuff.js";
+import { soundDringPotion, soundHeal } from "./audio.js";
+import { playAudio } from "./playAudio.js";
 export function buffFunction(){
     dirs.buffContainer.querySelector(".buff").addEventListener("click", buffAddToInventory, {once:true})
 }
@@ -34,11 +36,18 @@ export function buffAddHealt(e){
         }
     })
     dirs.indexMas = dirs.indexMas.filter(el=> el !== index)
+
     localStorage.setItem("masIndex", dirs.indexMas)
+
     e.currentTarget.parentNode.classList.add("free")
     e.currentTarget.remove()
     dirs.counterBuff -= 1
     localStorage.setItem("counterBuff", dirs.counterBuff)
+
+    playAudio(soundDringPotion)
+
+    playAudio(soundHeal)
+
 
     healWarrior()
 }

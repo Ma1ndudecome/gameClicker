@@ -1,11 +1,14 @@
 import { Glory } from "./Glory.js";
 import { classListAddFunc, stylehpBarWidth } from "./BaseFunc.js";
 import { dirs } from "./dirs.js";
+import { lose } from "./audio.js";
+import { playAudio } from "./playAudio.js";
 export const glory = new Glory()
 
 function killGlory(){
     clearInterval(dirs.id)
     classListAddFunc(dirs.loseIcon, "showLoseIcon")
+    playAudio(lose)
 }
 
 function damageGlory(){

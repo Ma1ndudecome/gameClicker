@@ -1,6 +1,8 @@
 import { Warrior } from "./Warrior.js";
 import { dirs } from "./dirs.js";
 import { killWarrior } from "./KillWarriro.js";
+import { playAudio } from "./playAudio.js";
+import { soundHit } from "./audio.js";
 
 export const warrior = new Warrior()
 
@@ -22,7 +24,7 @@ export function clickDamage(el, warrior){
     el.addEventListener("click", ()=>{
         if(!dirs.imgSword.classList.contains("attack")){
             warrior.damage(25)
-            
+            playAudio(soundHit)
         }
 
     })
