@@ -1,13 +1,18 @@
-dirs.container.addEventListener("click", ()=>{
-    classListAddFunc(dirs.imgSword, "attack")
-   if(dirs.imgSword.classList.contains("attack")){
-    audioHit.play()
-   }
-    
-})
+import { dirs } from "./dirs.js";
 
-setInterval(()=>{
-    classListRemoveFunc(dirs.imgSword, "attack")
-    
-}, 1300)
+import { classListAddFunc, classListRemoveFunc } from "./BaseFunc.js";
+
+export function addAnimToSword(){
+    dirs.container.addEventListener("click", ()=>{
+        classListAddFunc(dirs.imgSword, "attack")
+        
+    })
+   
+}
+
+export function removeStyleToSword(){
+    setInterval(()=>{
+        classListRemoveFunc(dirs.imgSword, "attack")
+    },900)
+}
 

@@ -1,4 +1,4 @@
-class ObserverDie{
+export class ObserverDie{
     constructor(){
         this.subscribers = []
     }

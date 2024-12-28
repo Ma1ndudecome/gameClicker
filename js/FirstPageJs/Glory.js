@@ -1,11 +1,12 @@
-class Glory{
+import { ObserverGloryHp } from "./ObserverHpKillGlory.js";
+export class Glory{
     constructor(){
         this.hp = 100;
-        this.obsHp = new ObserverGloryHp();
+        this.obsHp = new ObserverGloryHp()
     }
     damage(value){
         this.hp -= value
-        if(this.hp <=0){
+        if(this.hp <= 0){
             this.hp = 0
             this.obsHp.broadcast("kill")
             return

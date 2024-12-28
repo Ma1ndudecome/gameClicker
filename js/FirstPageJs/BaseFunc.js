@@ -1,10 +1,15 @@
-//Function AddClass
-function classListAddFunc(el, clas) {
+export function classListAddFunc(el, clas){
     el.classList.add(clas)
 }
 
-//Function RemoveClass
-
-function classListRemoveFunc(el, clas){
+export function classListRemoveFunc(el, clas){
     el.classList.remove(clas)
+}
+
+export function stylehpBarWidth(el, item){
+    el.style.width = item + '%'
+}
+
+export function styleHpBarTextContent(el, item){
+    el.textContent = item
 }

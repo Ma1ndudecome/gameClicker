@@ -5,18 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/master.css">
+    <script src="../js/master js/dirs.js" defer></script>
+
+    <script src="../js/FirstPageJs/BaseFunc.js" defer></script>
+
+    <script src="../js/FirstPageJs/ObserverHpWarrior.js" defer></script>
+
+    <script src="../js/master js/BossItem.js" defer></script>
+
+    <script src="../js/master js/DamageKillBoss.js" defer></script>
+
+    <script src="../js/master js/AttackAnimation.js" defer></script>
+
     <script defer src="../js/master.js"></script>
+
+    <script src="../js/FirstPageJs/ObserverHpKillGlory.js"></script>
+
+    <script src="../js/FirstPageJs/Glory.js" defer></script>
+
+    <script src="../js/master js/damageGlory.js" defer></script>
+    
+    <script src="../js/master js/DataFromLocal.js" defer></script>
+
+
+    <script src="../js/master js/HealGlory.js" defer></script>
+
+    <script src="../js/master js/markingBuff.js" defer></script>
+    
+    <script src="../js/master js/spawnRandomBufff.js" defer></script>
+
+
     <link rel="stylesheet" href="../css/default.css">
 </head>
 <body>
-    <section style="height: 90%;">
+    <div class="lose">
+        <div class="lose-block">
+            <span class="icon">💀</span>
+        <h1>You Lose (</h1>
+        <p>The darkness has consumed you. Gather your strength and try again!</p>
+        <a href="../main.html">Return to Main Menu</a>
+        </div>
+    </div>
+    <section style="height: 90%;" class="Mainsection">
         
         <!-- ! Health -->
     <header>
         <div class="healthbar">
             <div class="divbank">
                 <div class="back">
+                    <div class="backItem">
+                    </div>
                     <p>100</p>
+
                 </div>
                 <img class="hpicon" src="../img/newhpbar.png" alt="">
             </div>
@@ -46,13 +86,15 @@
         <div class="center-health-boss">
             <div class="health-boss">
                 <div class="back-health-color"> <!-- ! по 40 віднімать-->
-                    <p>300</p> <!-- !треба по 20 віднімать-->
+                     <!-- !треба по 20 віднімать-->
                 </div>
+                <p>300</p>
+            </div>
+            <div class="main-boss">
+                <img src="../img/Goaliath - Attack by Porforever on DeviantArt.gif" alt="">
             </div>
         </div>
-        <div class="main-boss">
-            <img src="../img/Goaliath - Attack by Porforever on DeviantArt.gif" alt="">
-        </div>
+       
     </main>
     
     <div class="sword">

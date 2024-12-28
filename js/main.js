@@ -8,6 +8,7 @@ startDiv.addEventListener("click", (event) =>{
     startDiv.style.display = 'none'
     audio[0].play()
     audio[0].loop = true
+    audio[0].volume = 0.5
 })
 
 showButton.addEventListener("click", ()=>{

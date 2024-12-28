@@ -69,6 +69,7 @@ body{
 .ButtonMenu{
     margin-top: 70px;
     div{
+        transition-duration: 0.5s;
         background-image: url(../img/buttonWood.PNG);
         background-size: cover;
         display: flex;
@@ -82,11 +83,13 @@ body{
         border-radius: 1px;
         margin: 2px;
         img{
+            transition-duration: 0.5s;
             margin-right: 10px;
             width: 60px;
             
         }
         p{
+            transition-duration: 0.5s;
             font-size: 29px;
             color: #deb887;
         }

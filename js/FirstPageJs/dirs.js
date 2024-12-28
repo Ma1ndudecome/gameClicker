@@ -1,4 +1,4 @@
-const dirs = {
+export const dirs = {
     buff: document.querySelector(".buff"),
     imgSword: document.querySelector(".img"),
     warrior: document.querySelector(".warriorDude"),
@@ -17,4 +17,6 @@ const dirs = {
     randomPosition:22,
     scoreI:document.querySelector(".ScoreItem"),
     score:0,
+    counterBuff:0,
+    indexMas:[]
 }
