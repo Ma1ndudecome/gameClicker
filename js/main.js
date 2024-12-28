@@ -8,6 +8,7 @@ startDiv.addEventListener("click", (event) =>{
     startDiv.style.display = 'none'
     audio[0].play()
     audio[0].loop = true
+    audio[0].volume = 0.5
 })
 
 showButton.addEventListener("click", ()=>{
@@ -15,7 +16,7 @@ showButton.addEventListener("click", ()=>{
     section.style.filter = 'blur(10px)'
 })
 
-window.addEventListener("keydown", (e)=>{
+document.addEventListener("keydown", (e)=>{
     if(e.key === 'q'){
         section.style.filter = 'blur(0)'
         devInfo.style.display = 'none'
