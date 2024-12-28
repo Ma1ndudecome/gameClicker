@@ -26,8 +26,15 @@ function buffAddToInventory(e){
 }
 
 export function buffAddHealt(e){
-    
-    
+    let index = 0
+    dirs.invAdd.forEach((el,i)=>{
+        if(el === e.currentTarget.parentNode){
+            index = i
+            return
+        }
+    })
+    dirs.indexMas = dirs.indexMas.filter(el=> el !== index)
+    localStorage.setItem("masIndex", dirs.indexMas)
     e.currentTarget.parentNode.classList.add("free")
     e.currentTarget.remove()
     dirs.counterBuff -= 1

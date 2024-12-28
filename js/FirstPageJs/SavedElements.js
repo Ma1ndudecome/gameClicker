@@ -26,9 +26,5 @@ export function statusSaved(){
     if(Number(localStorage.getItem("counterBuff")) !== 0){
         Number(localStorage.getItem("counterBuff"))
     }
-   
-
-
-
 
 }
