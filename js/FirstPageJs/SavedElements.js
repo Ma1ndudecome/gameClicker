@@ -13,6 +13,7 @@ export function statusSaved(){
     }
     if(localStorage.getItem("score")){
         dirs.scoreI.textContent = localStorage.getItem("score")
+        dirs.score = Number(localStorage.getItem("score"))
     }
     if(localStorage.getItem("isAliveLastWarrior") === 'false'){
         dirs.warriorContainer.remove()
@@ -22,6 +23,9 @@ export function statusSaved(){
     }
     if(localStorage.getItem("counterWarrior")){
         dirs.counterWarrior = Number(localStorage.getItem("counterWarrior"))
+    }
+    if(localStorage.getItem("highestScore")){
+        dirs.higestScore =  Number(localStorage.getItem("highestScore"))
     }
     if(Number(localStorage.getItem("counterBuff")) !== 0){
         Number(localStorage.getItem("counterBuff"))
