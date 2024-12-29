@@ -18,5 +18,6 @@ export const dirs = {
     scoreI:document.querySelector(".ScoreItem"),
     score:0,
     counterBuff:0,
-    indexMas:[]
+    indexMas:[],
+    higestScore:0,
 }

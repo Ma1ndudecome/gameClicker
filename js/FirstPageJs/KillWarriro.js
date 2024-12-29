@@ -6,14 +6,20 @@ import { classListRemoveFunc } from "./BaseFunc.js";
 import { warrior as warriorItems } from "./DamageKillWarrior.js";
 import { playAudio } from "./playAudio.js";
 import { soundDead } from "./audio.js";
+import { scores } from "./highestScore.js";
 export function killWarrior(el, warrior){
     spawnNewBuff()
+
     el.remove();
     warrior.die()
     playAudio(soundDead)
     dirs.counterWarrior += 1
     dirs.score += 38
+
     localStorage.setItem("score", dirs.score)
+
+    scores()
+    
     styleHpBarTextContent(dirs.scoreI, dirs.score)
     localStorage.setItem("counterWarrior", dirs.counterWarrior)
     if(dirs.counterWarrior === 5){
