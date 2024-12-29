@@ -123,6 +123,22 @@ body{
     background-color: lightgreen;
     border-radius: 20px;
 }
+
+.highScore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+.highScore h1{
+    color:white
+}
 .showModalHelp{
     visibility: visible;
     opacity: 1;

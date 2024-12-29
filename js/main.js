@@ -5,6 +5,9 @@ const audio = document.getElementsByTagName("audio")
 const startDiv = document.querySelector('.start')
 const modalHelp = document.querySelector(".modalHelp")
 const helpButton = document.querySelector(".helpButton")
+const hightSocreModal = document.querySelector(".highScore")
+const hightScore = document.querySelector(".highScore h1 span")
+const highScoreButton = document.querySelector(".highScoreButton")
 startDiv.addEventListener("click", (event) =>{
     startDiv.style.display = 'none'
     // audio[0].play()
@@ -33,5 +36,12 @@ modalHelp.addEventListener("click", (e)=>{
     }
 
 })
+highScoreButton.addEventListener("click", (e)=>{
+    e.preventDefault()
+    hightSocreModal.classList.add("showModalHelp")
+})
+if(localStorage.getItem("highestScore")){
+    hightScore.textContent = localStorage.getItem("highestScore")
+}
 
 
