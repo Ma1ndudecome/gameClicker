@@ -5,7 +5,7 @@ export const glory = new Glory()
 
 export function damageGlory(){
     dirs.intervalId = setTimeout(()=>{
-        glory.damage(20)
+        glory.damage(1)
         stylehpBarWidth(dirs.hpBar, glory.hp)
 
         styleHpBarTextContent(dirs.hpBarText, glory.hp)

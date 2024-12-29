@@ -20,6 +20,6 @@ export function spawnBuffRandom(){
 function spawn(){
     dirs.spawnInterval = setInterval(()=>{
         spawnBuffRandom()
-    }, 5000)
+    }, 3500)
 }
 spawn()
