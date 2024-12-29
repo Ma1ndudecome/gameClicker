@@ -3,10 +3,11 @@ const section = document.querySelector('.secti')
 const showButton = document.querySelector(".dev")
 const audio = document.getElementsByTagName("audio")
 const startDiv = document.querySelector('.start')
-
+const modalHelp = document.querySelector(".modalHelp")
+const helpButton = document.querySelector(".helpButton")
 startDiv.addEventListener("click", (event) =>{
     startDiv.style.display = 'none'
-    audio[0].play()
+    // audio[0].play()
     audio[0].loop = true
 })
 
@@ -21,6 +22,16 @@ window.addEventListener("keydown", (e)=>{
         devInfo.style.display = 'none'
     }
 })
+helpButton.addEventListener("click", (e)=>{
+    e.preventDefault()
+    modalHelp.classList.add("showModalHelp")
+   
+})
+modalHelp.addEventListener("click", (e)=>{
+    if(e.target === e.currentTarget){
+        modalHelp.classList.remove("showModalHelp")
+    }
 
+})
 
 
