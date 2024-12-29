@@ -40,6 +40,11 @@ highScoreButton.addEventListener("click", (e)=>{
     e.preventDefault()
     hightSocreModal.classList.add("showModalHelp")
 })
+hightSocreModal.addEventListener("click", (e)=>{
+    if(e.target === e.currentTarget){
+        hightSocreModal.classList.remove("showModalHelp")
+    }
+})
 if(localStorage.getItem("highestScore")){
     hightScore.textContent = localStorage.getItem("highestScore")
 }
