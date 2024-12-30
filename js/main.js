@@ -3,51 +3,57 @@ const section = document.querySelector('.secti')
 const showButton = document.querySelector(".dev")
 const audio = document.getElementsByTagName("audio")
 const startDiv = document.querySelector('.start')
-const modalHelp = document.querySelector(".modalHelp")
-const helpButton = document.querySelector(".helpButton")
-const hightSocreModal = document.querySelector(".highScore")
-const hightScore = document.querySelector(".highScore h1 span")
-const highScoreButton = document.querySelector(".highScoreButton")
+const help = document.querySelector('.help')
+const modalHelp = document.querySelector('.modalHelpMain')
+const hightSocreModal = document.querySelector(".highscore")
+const highScoreShow = document.querySelector('.highScoreMain')
+
 startDiv.addEventListener("click", (event) =>{
     startDiv.style.display = 'none'
-    // audio[0].play()
+    audio[0].play()
     audio[0].loop = true
     audio[0].volume = 0.5
 })
 
+// ! Develop
 showButton.addEventListener("click", ()=>{
     devInfo.style.display = 'flex'
     section.style.filter = 'blur(10px)'
 })
 
 document.addEventListener("keydown", (e)=>{
-    if(e.key === 'q'){
+    if(e.key === 'q' || e.key === 'й'){
         section.style.filter = 'blur(0)'
         devInfo.style.display = 'none'
     }
 })
-helpButton.addEventListener("click", (e)=>{
-    e.preventDefault()
-    modalHelp.classList.add("showModalHelp")
-   
-})
-modalHelp.addEventListener("click", (e)=>{
-    if(e.target === e.currentTarget){
-        modalHelp.classList.remove("showModalHelp")
-    }
 
+// ! Help
+help.addEventListener('click', (e) =>{
+    modalHelp.style.display = 'flex'
+    section.style.filter = 'blur(10px)'
 })
-highScoreButton.addEventListener("click", (e)=>{
-    e.preventDefault()
-    hightSocreModal.classList.add("showModalHelp")
-})
-hightSocreModal.addEventListener("click", (e)=>{
-    if(e.target === e.currentTarget){
-        hightSocreModal.classList.remove("showModalHelp")
+
+document.addEventListener('keydown', (e) =>{
+    if(e.key === 'q' || e.key === 'й'){
+        section.style.filter = 'blur(0)'
+        modalHelp.style.display = 'none'
     }
 })
-if(localStorage.getItem("highestScore")){
-    hightScore.textContent = localStorage.getItem("highestScore")
-}
+
+
+// ! High Score
+hightSocreModal.addEventListener('click', (e) =>{
+    highScoreShow.style.display = 'flex'
+    section.style.filter = 'blur(10px)'
+})
+
+document.addEventListener('keydown', (e) =>{
+    if(e.key === 'q' || e.key === 'й'){
+        section.style.filter = 'blur(0)'
+        highScoreShow.style.display = 'none'
+    }
+})
+
 
 

@@ -109,44 +109,72 @@ body{
         }
     }
 }
+
+/* * Help */
+.modalHelpMain{
+    animation: ani 2s forwards;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    label{
+        font-size: 25px;
+        color: snow;
+        font-family: Dark;
+    }
+}
+
 .modalHelp{
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 450px;
+    background-image: url(../img/WelcomeWood.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: 0.5s;
 }
 .infos{
-    width: 40%;
-    height: 40%;
-    background-color: lightgreen;
-    border-radius: 20px;
+
+}
+
+/* * High Score */
+.highScoreMain{
+    animation: ani 2s forwards;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    label{
+        font-family: Dark;
+        color: snow;
+    }
 }
 
 .highScore{
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
     transition: 0.5s;
 }
-.highScore h1{
-    color:white
+.highScore{
+    background-image: url(../img/buttonWood.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 130px;
+    h3{
+        color:#deb887;
+        font-family: Wood;
+    }
 }
-.showModalHelp{
-    visibility: visible;
-    opacity: 1;
-}
+
+/* * Developer */
 .DevWindow{
     animation: ani 2s forwards;
     font-family: HandFont;
@@ -159,7 +187,6 @@ body{
     align-items: center;
     background-repeat: no-repeat;
     position: absolute;
-    
     .bookWindow{
         display: grid;
         align-content: center;
