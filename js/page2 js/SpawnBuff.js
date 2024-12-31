@@ -1,7 +1,7 @@
-import { dirs } from "./dirs.js";
-import { markingBuff } from "./markingBuff.js";
-import { healGlory } from "./HealGlory.js";
-export function spawnBuffRandom(){
+import { dirs } from "./dirs.js"
+import { markingBuff } from "../master js/markingBuff.js"
+import { HealGlory } from "./HealGlory.js"
+function spawnBuffRandom(){
     const randomPositionX = Math.floor(Math.random()*70)
     const randomPositionY = Math.floor(Math.random()*70)
 
@@ -12,14 +12,13 @@ export function spawnBuffRandom(){
     buff.style.top = randomPositionY+ '%'
     
     buff.addEventListener("click", (e)=>{
-        e.target.remove()
-        healGlory()
+        e.currentTarget.remove()
+        HealGlory()
     }, {once:true})
 }
-
-export function spawn(){
-    dirs.spawnInterval = setInterval(()=>{
+function spawn(){
+    dirs.intervalSpawn = setInterval(()=>{
         spawnBuffRandom()
-    }, 3500)
+    },5000)
 }
 spawn()

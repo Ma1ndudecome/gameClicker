@@ -10,5 +10,6 @@ export const dirs = {
     loseIcon:document.querySelector(".lose"),
     secondWarrior:document.querySelectorAll(".none"),
     spawnWarrior:document.querySelector(".box-enemy"),
-    counterWarrior:0
+    counterWarrior:0,
+    intervalSpawn:0,
 }

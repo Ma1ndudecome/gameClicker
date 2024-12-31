@@ -1,7 +1,8 @@
-import {glory} from "../FirstPageJs/DamageGlory.js"
 import { dirs } from "./dirs.js"
 import { classListAddFunc, stylehpBarWidth, styleHpBarTextContent, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js";
 import { killGlory } from "./KillGlory.js";
+import { Glory } from "../FirstPageJs/Glory.js";
+export const glory = new Glory
 function damageGlory(){
     dirs.damageInterval = setTimeout(()=>{
         glory.damage(2)
