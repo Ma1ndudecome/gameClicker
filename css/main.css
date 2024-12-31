@@ -112,12 +112,15 @@ body{
 
 /* * Help */
 .modalHelpMain{
+    width: 100%;
+    height: 100vh;
     animation: ani 2s forwards;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
     label{
         font-size: 25px;
         color: snow;
@@ -143,6 +146,9 @@ body{
 
 /* * High Score */
 .highScoreMain{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
     animation: ani 2s forwards;
     display: none;
     justify-content: center;
