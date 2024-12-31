@@ -302,7 +302,6 @@ main{
 }
 .attackAnim{
     animation: 0.3s attack 0s 1 forwards linear;
-
 }
 .damage{
     animation: 0.2s damage 0s 1 forwards linear;
