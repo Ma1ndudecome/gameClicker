@@ -2,9 +2,9 @@ import {glory} from "../FirstPageJs/DamageGlory.js"
 import { dirs } from "./dirs.js"
 import { classListAddFunc, stylehpBarWidth, styleHpBarTextContent, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js";
 import { killGlory } from "./KillGlory.js";
-function damageGlory(damage){
+function damageGlory(){
     dirs.damageInterval = setTimeout(()=>{
-        glory.damage(damage)
+        glory.damage(2)
         stylehpBarWidth(dirs.healGlory,glory.hp)
         styleHpBarTextContent(dirs.textHeal, glory.hp)
         classListAddFunc(document.body, "showBef")
@@ -16,7 +16,7 @@ function damageGlory(damage){
 
 glory.obsHp.subscribe((e)=>{
     if(e === 'damage'){
-        damageGlory(1)
+        damageGlory()
     }else if(e === 'kill'){
         killGlory()
     }

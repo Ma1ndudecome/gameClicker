@@ -5,7 +5,7 @@ import { killWarrior } from "./KillWarrior.js";
 export function warriorDamageEventListener(el, warrior){
     el.addEventListener("click", ()=>{
         if(!dirs.sword.classList.contains("attackAnim")){
-            warrior.damage(25)
+            warrior.damage(10)
         }
    })
 }
