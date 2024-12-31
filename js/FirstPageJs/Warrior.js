@@ -13,7 +13,8 @@ export class Warrior{
 
         if(this.hp <=0){
             this.obs.broadcast("kill")
-            this.hp = 0
+            this.hp = 0;
+            
         }
         this.obs.broadcast("damage")
     }
