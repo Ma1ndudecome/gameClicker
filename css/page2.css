@@ -229,20 +229,40 @@ z-index: 2;
 
 /* ! Enemys */
 main{
-    height: 10%;
+    height: 50%;
     position: absolute;
     width: 600px;
+    left:30%;
+    top:40%;
     display: flex;
-    align-items: end;
-    justify-content: end;
-    img{
-        position: absolute;
-        width: 600px;
-        height: 600px;
+    flex-direction: column;
+    align-items: center;
+    img{  
+       width: 100%;
+       height: 70%;
     }
 }
 
+.health-warrior {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 25px;
+    background: linear-gradient(145deg, #2a2a2a, #111);
+    border: 2px solid #6a0404;
+    border-radius: 5px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.6);
+    margin: 10px auto;
+}
 
+.health-warrior-item {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #8b0000, #ff4500);
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.8), 0 0 5px rgba(139, 0, 0, 0.8);
+    transition: width 0.4s ease;
+}
 .sword{
     height: 93.8%;
     display: flex;
