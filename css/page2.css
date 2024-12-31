@@ -348,6 +348,8 @@ main{
     } 
 }
 
-/* rgb(100, 51, 51) */
+.none{
+    display: none;
+}
 
 
