@@ -36,6 +36,7 @@ body::before{
 body.showBef::before{
     opacity: 1;
 }
+
 body::after{
     opacity: 0;
     content: '';
@@ -302,7 +303,6 @@ main{
 }
 .attackAnim{
     animation: 0.3s attack 0s 1 forwards linear;
-
 }
 .damage{
     animation: 0.2s damage 0s 1 forwards linear;
