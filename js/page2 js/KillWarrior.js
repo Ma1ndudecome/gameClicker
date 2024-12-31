@@ -7,6 +7,7 @@ export function killWarrior(elC,el,warrior, img){
     img.remove()
     if(dirs.counterWarrior === 1){
         clearInterval(dirs.damageInterval)
+        clearInterval(dirs.intervalSpawn)
         return
     }
     spawnWarrior()
