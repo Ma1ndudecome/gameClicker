@@ -1,9 +1,18 @@
 import { HealGlory } from "./HealGlory.js"
+import { dirs } from "./dirs.js"
 export function buffEventFunction(el){
     el.addEventListener("click", (e)=>{
+        
+        dirs.inventory.forEach((el,i)=>{
+            if(el === e.currentTarget.parentElement){
+              dirs.masIndex = dirs.masIndex.filter(el=>Number(el) !== i)
+              localStorage.setItem("masIndex", dirs.masIndex)
+            }
+        })
+        
+        
+        
         e.currentTarget.remove()
-        const a = localStorage.getItem("masIndex").slice(localStorage.getItem("masIndex").length -1, localStorage.getItem("masIndex").length+1)
-        console.log(a)
         HealGlory()
     }, {once:true})
 }

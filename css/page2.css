@@ -63,6 +63,9 @@ body::after{
 body.showAfter::after{
     opacity: 1;
 }
+*{
+    user-select: none;
+}
 .lose {
     opacity: 0;
     visibility: hidden;
