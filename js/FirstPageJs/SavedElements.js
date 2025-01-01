@@ -3,10 +3,16 @@ import { glory } from './DamageGlory.js'
 import { stylehpBarWidth, classListRemoveFunc } from "./BaseFunc.js";
 
 export function statusSaved(){
-    if(localStorage.getItem("masIndex")){
-       dirs.indexMas =  localStorage.getItem("masIndex").split(',').map(el=>Number(el))
-       console.log(dirs.indexMas)
-    }
+    const saveEl = [
+        {
+            key:"masIndex",
+            do:(value)=>{
+                dirs.indexMas =  localStorage.getItem(value).split(',').map(el=>Number(el))
+            }
+        },
+
+    ]
+  
     if(localStorage.getItem("hpGlory")){
         glory.hp = Number(localStorage.getItem("hpGlory"))
         stylehpBarWidth(dirs.GloryHealth, glory.hp)
@@ -30,5 +36,12 @@ export function statusSaved(){
     if(Number(localStorage.getItem("counterBuff")) !== 0){
         Number(localStorage.getItem("counterBuff"))
     }
+    saveEl.forEach(el=>{
+        const value = localStorage.getItem(el.key)
+        if(value !== null){
+            el.do(value)
+        }
+    })
+    console.log(dirs.indexMas)
 
 }
