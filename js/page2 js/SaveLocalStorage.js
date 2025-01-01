@@ -26,6 +26,9 @@ function saveLocalStorage(){
 
                     dirs.healthWarriorContainer.remove()
                     dirs.warrior.remove()
+                    setTimeout(()=>{
+                        location.href = './master.html'
+                    },2500)
 
                 }
             }

@@ -9,6 +9,10 @@ export function killWarrior(elC,el,warrior, img){
         clearInterval(dirs.damageInterval)
         clearInterval(dirs.intervalSpawn)
         localStorage.setItem("AllWarriorDie", true)
+
+        setTimeout(()=>{
+            location.href = './master.html'
+        },2500)
         return
     }
     spawnWarrior()
