@@ -14,4 +14,8 @@ export function killBoss(){
         dirs.bossItem.remove()
         dirs.healthBoss.remove()
     }, 2000)
+
+    setTimeout(()=>{
+        location.href = './castle.html'
+    }, 2000)
 }

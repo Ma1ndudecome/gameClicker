@@ -10,6 +10,9 @@ export function HealGlory(){
     stylehpBarWidth(dirs.healGlory, glory.hp)
     styleHpBarTextContent(dirs.textHeal, glory.hp)
 
+    soundHeal.volume = 0.5
+    soundDringPotion.volume = 0.5
+
     playAudio(soundHeal)
     playAudio(soundDringPotion)
 
@@ -17,5 +20,7 @@ export function HealGlory(){
 
     setTimeout(()=>{
             classListRemoveFunc(document.body, "showAfter")
-        }, 500)
+    }, 500)
+
+    localStorage.setItem("hpGlory", glory.hp)
 }
