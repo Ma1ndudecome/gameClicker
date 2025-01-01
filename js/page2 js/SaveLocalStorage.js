@@ -1,5 +1,6 @@
 import { glory } from "./DamageGlory.js"
 import { dirs } from "./dirs.js"
+import { buffEventFunction } from "./EventListenerForBuffInInventory.js"
 import { styleHpBarTextContent, stylehpBarWidth, classListAddFunc } from "../FirstPageJs/BaseFunc.js"
 function saveLocalStorage(){
     const saveEl = [
@@ -30,10 +31,11 @@ function saveLocalStorage(){
                 const mas = value.split(',')
                 mas.forEach(el=>{
                     dirs.inventory[Number(el)].insertAdjacentHTML("afterbegin", localStorage.getItem("buffMarking"))
-                    classListAddFunc(dirs.inventory[Number(el)].querySelector(".buff"), "toInv") 
+                    classListAddFunc(dirs.inventory[Number(el)].querySelector(".buff"), "toInv")
+                    buffEventFunction(dirs.inventory[Number(el)].querySelector(".buff"))
                 })
             }
-        }
+        },
     ]
 
     saveEl.forEach(el=>{
