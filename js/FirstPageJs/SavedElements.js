@@ -14,21 +14,21 @@ export function statusSaved(){
         },
         {
             key:"hpGlory",
-            do:(value)=>{
+            do:value=>{
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.GloryHealth, glory.hp)
             }
         },
         {
             key:"score",
-            do:(value)=>{
+            do:value=>{
                 dirs.scoreI.textContent = value
                 dirs.score = Number(value)
             }
         },
         {
             key:"isAliveLastWarrior",
-            do:(value)=>{
+            do:value=>{
                 if(value === 'false'){
                     dirs.warriorContainer.remove()
                     clearInterval(dirs.id)
@@ -37,18 +37,20 @@ export function statusSaved(){
                 }
             }
         },
-
+        {
+            key:"counterWarrior",
+            do:value=>{
+                dirs.counterWarrior = Number(value)
+            }
+        },
+        {
+            key:"highestScore",
+            do:value=>{
+                dirs.higestScore = Number(value)
+            }
+        },  
     ]
-  
-    if(localStorage.getItem("counterWarrior")){
-        dirs.counterWarrior = Number(localStorage.getItem("counterWarrior"))
-    }
-    if(localStorage.getItem("highestScore")){
-        dirs.higestScore =  Number(localStorage.getItem("highestScore"))
-    }
-    if(Number(localStorage.getItem("counterBuff")) !== 0){
-        Number(localStorage.getItem("counterBuff"))
-    }
+
     saveEl.forEach(el=>{
         const value = localStorage.getItem(el.key)
         if(value !== null){
@@ -56,5 +58,4 @@ export function statusSaved(){
         }
     })
     
-    console.log(saveEl)
 }
