@@ -7,7 +7,10 @@ export function statusSaved(){
         {
             key:"masIndex",
             do:(value)=>{
-                dirs.indexMas =  value.split(',').map(el=>Number(el))
+                if(value === null){
+                    return
+                }
+                dirs.indexMas = value.split(',').map(el=>Number(el))
                 
                 
             }
@@ -15,6 +18,9 @@ export function statusSaved(){
         {
             key:"hpGlory",
             do:value=>{
+                if(value === null){
+                    return
+                }
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.GloryHealth, glory.hp)
             }
@@ -22,6 +28,9 @@ export function statusSaved(){
         {
             key:"score",
             do:value=>{
+                if(value === null){
+                    return
+                }
                 dirs.scoreI.textContent = value
                 dirs.score = Number(value)
             }
@@ -29,23 +38,34 @@ export function statusSaved(){
         {
             key:"isAliveLastWarrior",
             do:value=>{
-                if(value === 'false'){
+                if(value === null){
+                    return
+                }else if(value === 'false'){
                     dirs.warriorContainer.remove()
                     clearInterval(dirs.id)
                     classListRemoveFunc(document.body, "show-bef")
                     classListRemoveFunc(document.body, "show-after-more")
+                    setTimeout(()=>{
+                        location.href = './page2.html'
+                    },3000)
                 }
             }
         },
         {
             key:"counterWarrior",
             do:value=>{
+                if(value === null){
+                    return
+                }
                 dirs.counterWarrior = Number(value)
             }
         },
         {
             key:"highestScore",
             do:value=>{
+                if(value === null){
+                    return
+                }
                 dirs.higestScore = Number(value)
             }
         },  

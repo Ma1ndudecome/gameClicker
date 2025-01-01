@@ -7,6 +7,9 @@ function saveLocalStorage(){
         {
             key:"hpGlory",
             do:(value)=>{
+                if(value === null){
+                    return
+                }
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.healGlory, glory.hp)
                 styleHpBarTextContent(dirs.textHeal, glory.hp)
@@ -15,7 +18,9 @@ function saveLocalStorage(){
         {
             key:"AllWarriorDie",
             do:(value)=>{
-                if(value === 'true'){
+                if(value === null){
+                    return
+                }else if(value === 'true'){
                     clearInterval(dirs.damageInterval)
                     clearInterval(dirs.intervalSpawn)
 
@@ -28,7 +33,7 @@ function saveLocalStorage(){
         {
             key:"masIndex",
             do:(value)=>{
-                if(value === ''){
+                if(value === '' || value === null){
                     return
                 }
                 dirs.masIndex = value.split(',')

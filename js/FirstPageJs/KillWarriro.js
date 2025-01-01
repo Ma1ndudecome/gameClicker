@@ -28,6 +28,10 @@ export function killWarrior(el, warrior){
         clearInterval(dirs.id)
         classListRemoveFunc(document.body, "show-bef")
         classListRemoveFunc(document.body, "show-after-more")
+
+        setTimeout(()=>{
+            location.href = './page2.html'
+        },3000)
         return
     }
     createWarrior()

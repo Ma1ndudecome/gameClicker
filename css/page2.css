@@ -198,6 +198,11 @@ z-index: 2;
     z-index: 2;
 
 }
+.drBuff{
+    width: 100px;
+    height: 100px;
+    animation: drop 5s 0s forwards linear;
+}
 /* ! Inventory */
 .inventory{ 
     margin-top: 50px;

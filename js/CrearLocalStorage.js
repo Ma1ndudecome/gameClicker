@@ -8,7 +8,6 @@ function clearLocalStorage(){
     localStorage.removeItem("masIndex")
     localStorage.removeItem("score")
     localStorage.removeItem("el")
-
-
+    localStorage.removeItem("AllWarriorDie")
 }
 clearLocalStorage()
