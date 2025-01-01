@@ -7,26 +7,39 @@ export function statusSaved(){
         {
             key:"masIndex",
             do:(value)=>{
-                dirs.indexMas =  localStorage.getItem(value).split(',').map(el=>Number(el))
+                dirs.indexMas =  value.split(',').map(el=>Number(el))
+                
+                
+            }
+        },
+        {
+            key:"hpGlory",
+            do:(value)=>{
+                glory.hp = Number(value)
+                stylehpBarWidth(dirs.GloryHealth, glory.hp)
+            }
+        },
+        {
+            key:"score",
+            do:(value)=>{
+                dirs.scoreI.textContent = value
+                dirs.score = Number(value)
+            }
+        },
+        {
+            key:"isAliveLastWarrior",
+            do:(value)=>{
+                if(value === 'false'){
+                    dirs.warriorContainer.remove()
+                    clearInterval(dirs.id)
+                    classListRemoveFunc(document.body, "show-bef")
+                    classListRemoveFunc(document.body, "show-after-more")
+                }
             }
         },
 
     ]
   
-    if(localStorage.getItem("hpGlory")){
-        glory.hp = Number(localStorage.getItem("hpGlory"))
-        stylehpBarWidth(dirs.GloryHealth, glory.hp)
-    }
-    if(localStorage.getItem("score")){
-        dirs.scoreI.textContent = localStorage.getItem("score")
-        dirs.score = Number(localStorage.getItem("score"))
-    }
-    if(localStorage.getItem("isAliveLastWarrior") === 'false'){
-        dirs.warriorContainer.remove()
-        clearInterval(dirs.id)
-        classListRemoveFunc(document.body, "show-bef")
-        classListRemoveFunc(document.body, "show-after-more")
-    }
     if(localStorage.getItem("counterWarrior")){
         dirs.counterWarrior = Number(localStorage.getItem("counterWarrior"))
     }
@@ -42,6 +55,6 @@ export function statusSaved(){
             el.do(value)
         }
     })
-    console.log(dirs.indexMas)
-
+    
+    console.log(saveEl)
 }
