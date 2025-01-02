@@ -26,7 +26,6 @@ spawn()
 
 
 function deleteBuff(){
-    
     setTimeout(()=>{
         const el = document.body.querySelector(".buff")
         if(el){
