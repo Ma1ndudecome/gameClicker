@@ -9,5 +9,9 @@ function clearLocalStorage(){
     localStorage.removeItem("score")
     localStorage.removeItem("el")
     localStorage.removeItem("AllWarriorDie")
+    localStorage.removeItem("bossHp")
+    localStorage.removeItem("IsAliveBoss")
+
+
 }
 clearLocalStorage()

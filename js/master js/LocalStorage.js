@@ -1,6 +1,9 @@
 import { stylehpBarWidth, styleHpBarTextContent } from "../FirstPageJs/BaseFunc.js";
 import { glory } from "./damageGlory.js";
 import { dirs } from "./dirs.js";
+import { boss } from "./BossItem.js";
+import { showBossHp } from "./DamageBoss.js";
+import { killBoss } from "./KillBoss.js";
 function loadingData(){
     
     const dataEl = [
@@ -15,6 +18,23 @@ function loadingData(){
                 styleHpBarTextContent(dirs.hpBarText, glory.hp)
             }
         },
+        {
+            key:"bossHp",
+            do:value=>{
+                if(value === null){
+                    return
+                }
+                boss.hp = Number(value)
+                showBossHp()
+            }
+        },
+        {
+            key:"IsAliveBoss",
+            do:value=>{
+                if(value === null) return
+                killBoss()
+            }
+        }
         
     ]
     dataEl.forEach(el=>{
