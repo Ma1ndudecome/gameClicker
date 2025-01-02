@@ -15,6 +15,8 @@ export function damageGlory(){
         setTimeout(()=>{
             classListRemoveFunc(document.body, "showBef")
         }, 1000)
+
+        localStorage.setItem("hpGlory", glory.hp)
     }, 3000)
 }
 

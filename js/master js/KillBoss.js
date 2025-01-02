@@ -18,4 +18,5 @@ export function killBoss(){
     setTimeout(()=>{
         location.href = './castle.html'
     }, 2000)
+    localStorage.setItem("IsAliveBoss", false)
 }
