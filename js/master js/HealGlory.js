@@ -20,4 +20,6 @@ export function healGlory(){
     setTimeout(()=>{
         classListRemoveFunc(document.body, "showAfter")
     }, 500)
+
+    localStorage.setItem("hpGlory", glory.hp)
 }

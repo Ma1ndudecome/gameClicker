@@ -1,4 +1,5 @@
 import "./AttackAnimation.js"
+import "./LocalStorage.js"
 import "./DamageBoss.js"
 import "./SubscribeKillDamageWarrior.js"
 import "./subscribeDamageKillGlory.js"
@@ -7,4 +8,4 @@ import "./SpawnRandomBuff.js"
 import "./ClearSomeElLocalStorage.js"
 import { playAudio } from "../FirstPageJs/playAudio.js"
 import { soundDragon } from "../FirstPageJs/audio.js"
-playAudio(soundDragon)
+// playAudio(soundDragon)
