@@ -38,7 +38,7 @@ function loadingData(){
         
     ]
     dataEl.forEach(el=>{
-        console.log(el.key)
+        
         const value = localStorage.getItem(el.key)
         if(value !== null){
             el.do(value)

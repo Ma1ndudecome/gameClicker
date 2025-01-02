@@ -77,5 +77,7 @@ export function statusSaved(){
             el.do(value)
         }
     })
+    localStorage.removeItem("IsAliveBoss")
+    localStorage.removeItem("bossHp")
     
 }
