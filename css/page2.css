@@ -138,6 +138,24 @@ body.showAfter::after{
 }
 /* ! HealthBar */
 .healthbar{
+    display: flex;
+    justify-content: space-between;
+    .scoreItem{
+        padding: 10px;
+        height: 30px;
+        opacity: 90%;
+        border-radius: 5px;
+        border: 5px outset black;
+        background-color: #2a2a2a;
+        margin-left: 50px;    
+        font-family: Dark;
+        color: rgb(157, 150, 150);
+        font-size: 20px;
+        span{
+            margin-left: 10px;
+            color: rgb(192, 192, 110);
+        }
+    }
     .divbank{
         display: flex;
         align-items: center;

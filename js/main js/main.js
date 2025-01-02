@@ -8,6 +8,7 @@ const modalHelp = document.querySelector('.modalHelpMain')
 const hightSocreModal = document.querySelector(".highscore")
 const highScoreShow = document.querySelector('.highScoreMain')
 
+
 startDiv.addEventListener("click", (event) => {
     startDiv.style.display = 'none'
     audio[0].play()
