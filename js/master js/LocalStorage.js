@@ -32,6 +32,7 @@ function loadingData() {
             key: "score",
             do: value => {
                 styleHpBarTextContent(dirs.score, value)
+                dirs.scoreEl = Number(value)
             }
         }
 

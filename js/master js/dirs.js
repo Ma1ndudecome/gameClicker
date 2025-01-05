@@ -13,4 +13,5 @@ export const dirs = {
     bossContainer:document.querySelector(".center-health-boss"),
     intervalDamage:0,
     score:document.querySelector(".scoreItem span"),
+    scoreEl:0,
 }
