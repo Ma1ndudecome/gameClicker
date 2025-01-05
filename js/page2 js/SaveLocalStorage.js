@@ -43,7 +43,9 @@ function saveLocalStorage(){
         {
             key:"score",
             do:value=>{
+                console.log(value)
                 styleHpBarTextContent(dirs.score, value)
+                dirs.scoreEl = Number(value)
             }
         }
     ]
