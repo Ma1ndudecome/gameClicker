@@ -24,7 +24,7 @@ function loadingData() {
         },
         {
             key: "IsAliveBoss",
-            do: value => {
+            do: () => {
                 killBoss()
             }
         },
