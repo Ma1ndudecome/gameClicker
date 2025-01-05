@@ -48,6 +48,12 @@ function saveLocalStorage(){
                 })
             }
         },
+        {
+            key:"score",
+            do:value=>{
+                styleHpBarTextContent(dirs.score, value)
+            }
+        }
     ]
 
     saveEl.forEach(el=>{

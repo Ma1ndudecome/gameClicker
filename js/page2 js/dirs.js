@@ -13,5 +13,6 @@ export const dirs = {
     counterWarrior:0,
     intervalSpawn:0,
     inventory:document.querySelectorAll(".inventory-row1 div"),
-    masIndex:[]
+    masIndex:[],
+    score:document.querySelector(".scoreItem span")
 }
