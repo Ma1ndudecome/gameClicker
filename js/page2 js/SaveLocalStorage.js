@@ -7,9 +7,6 @@ function saveLocalStorage(){
         {
             key:"hpGlory",
             do:(value)=>{
-                if(value === null){
-                    return
-                }
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.healGlory, glory.hp)
                 styleHpBarTextContent(dirs.textHeal, glory.hp)
@@ -18,9 +15,7 @@ function saveLocalStorage(){
         {
             key:"AllWarriorDie",
             do:(value)=>{
-                if(value === null){
-                    return
-                }else if(value === 'true'){
+               if(value === 'true'){
                     clearInterval(dirs.damageInterval)
                     clearInterval(dirs.intervalSpawn)
 
@@ -36,9 +31,6 @@ function saveLocalStorage(){
         {
             key:"masIndex",
             do:(value)=>{
-                if(value === '' || value === null){
-                    return
-                }
                 dirs.masIndex = value.split(',')
                 
                 dirs.masIndex.forEach(el=>{
@@ -48,11 +40,27 @@ function saveLocalStorage(){
                 })
             }
         },
+        {
+            key:"score",
+            do:value=>{
+                console.log(value)
+                styleHpBarTextContent(dirs.score, value)
+                dirs.scoreEl = Number(value)
+            }
+        },
+        {
+            key:"highestScore",
+            do:value=>{
+                dirs.higestScore = Number(value)
+            }
+        }
     ]
 
     saveEl.forEach(el=>{
         const value = localStorage.getItem(el.key)
-        el.do(value)
+        if(value !== null){
+            el.do(value)
+        }
     })
 }
 saveLocalStorage()

@@ -1,9 +1,8 @@
-import { dirs } from "./dirs.js";
+import { dirs } from "./dirs.js"
 export function scores(){
-
-    if(dirs.score <= dirs.higestScore){
+    if(dirs.scoreEl <= dirs.higestScore){
         return
     }
-    dirs.higestScore += 38
+    dirs.higestScore += 42
     localStorage.setItem("highestScore", dirs.higestScore)
 }

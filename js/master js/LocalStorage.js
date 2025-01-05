@@ -4,43 +4,49 @@ import { dirs } from "./dirs.js";
 import { boss } from "./BossItem.js";
 import { showBossHp } from "./DamageBoss.js";
 import { killBoss } from "./KillBoss.js";
-function loadingData(){
-    
+function loadingData() {
+
     const dataEl = [
         {
-            key:"hpGlory",
-            do:value=>{
-                if(value === null){
-                    return
-                }
+            key: "hpGlory",
+            do: value => {
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.hpBar, glory.hp)
                 styleHpBarTextContent(dirs.hpBarText, glory.hp)
             }
         },
         {
-            key:"bossHp",
-            do:value=>{
-                if(value === null){
-                    return
-                }
+            key: "bossHp",
+            do: value => {
                 boss.hp = Number(value)
                 showBossHp()
             }
         },
         {
-            key:"IsAliveBoss",
-            do:value=>{
-                if(value === null) return
+            key: "IsAliveBoss",
+            do: () => {
                 killBoss()
             }
+        },
+        {
+            key: "score",
+            do: value => {
+                styleHpBarTextContent(dirs.score, value)
+                dirs.scoreEl = Number(value)
+            }
+        },
+        {
+            key: "highestScore",
+            do: value => {
+                dirs.higestScore = Number(value)
+            }
         }
-        
+
     ]
-    dataEl.forEach(el=>{
-        
+    dataEl.forEach(el => {
+
         const value = localStorage.getItem(el.key)
-        if(value !== null){
+        if (value !== null) {
             el.do(value)
         }
     })

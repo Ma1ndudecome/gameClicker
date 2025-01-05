@@ -11,5 +11,8 @@ export const dirs = {
     spawnInterval:0,
     loseIcon:document.querySelector(".lose"),
     bossContainer:document.querySelector(".center-health-boss"),
-    intervalDamage:0
+    intervalDamage:0,
+    score:document.querySelector(".scoreItem span"),
+    scoreEl:0,
+    higestScore:0,
 }

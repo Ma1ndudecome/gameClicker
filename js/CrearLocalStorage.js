@@ -1,4 +1,4 @@
-function clearLocalStorage(){
+ function clearLocalStorage(){
     localStorage.removeItem("hpGlory")
     localStorage.removeItem("buffMarking")
     localStorage.removeItem("counterBuff")
@@ -11,7 +11,5 @@ function clearLocalStorage(){
     localStorage.removeItem("AllWarriorDie")
     localStorage.removeItem("bossHp")
     localStorage.removeItem("IsAliveBoss")
-
-
 }
 clearLocalStorage()
