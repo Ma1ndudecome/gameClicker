@@ -1,6 +1,7 @@
 import "../CrearLocalStorage.js"
 import "./const.js"
 import "./takeItemLocal.js"
+console.log('213')
 const devInfo = document.querySelector(".DevWindow")
 const section = document.querySelector('.secti')
 const showButton = document.querySelector(".dev")
