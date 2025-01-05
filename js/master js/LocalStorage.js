@@ -10,9 +10,6 @@ function loadingData() {
         {
             key: "hpGlory",
             do: value => {
-                if (value === null) {
-                    return
-                }
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.hpBar, glory.hp)
                 styleHpBarTextContent(dirs.hpBarText, glory.hp)
@@ -21,9 +18,6 @@ function loadingData() {
         {
             key: "bossHp",
             do: value => {
-                if (value === null) {
-                    return
-                }
                 boss.hp = Number(value)
                 showBossHp()
             }
@@ -31,7 +25,6 @@ function loadingData() {
         {
             key: "IsAliveBoss",
             do: value => {
-                if (value === null) return
                 killBoss()
             }
         },
