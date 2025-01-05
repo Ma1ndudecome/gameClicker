@@ -1,6 +1,6 @@
 import { dirs } from "./const.js"
 function takeFromLocalStorage(){
-    
+   
     const masLocalItem = [
         {
             key:"highestScore",
@@ -18,3 +18,4 @@ function takeFromLocalStorage(){
 
 }
 takeFromLocalStorage()
+console.log('213')
