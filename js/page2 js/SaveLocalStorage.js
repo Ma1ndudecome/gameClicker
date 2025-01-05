@@ -51,7 +51,7 @@ function saveLocalStorage(){
         {
             key:"highestScore",
             do:value=>{
-                dirs.highestScore = Number(value)
+                dirs.higestScore = Number(value)
             }
         }
     ]

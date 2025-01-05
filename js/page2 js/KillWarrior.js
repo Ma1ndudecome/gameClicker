@@ -1,10 +1,12 @@
 import { dirs } from "./dirs.js"
 import { spawnWarrior } from "./spawnNewWarrior.js"
+import { scores } from "./higestScore.js"
 export function killWarrior(elC,el,warrior, img){
     elC.remove()
     el.remove()
     warrior.die()
     img.remove()
+    scores()
     if(dirs.counterWarrior === 1){
         clearInterval(dirs.damageInterval)
         clearInterval(dirs.intervalSpawn)

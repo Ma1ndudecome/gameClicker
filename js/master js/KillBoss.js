@@ -1,6 +1,7 @@
 import { showBossHp } from "./DamageBoss.js";
 import { classListAddFunc, classListRemoveFunc, styleHpBarTextContent} from "../FirstPageJs/BaseFunc.js";
 import { dirs } from "./dirs.js";
+import { scores } from "./higestScore.js";
 export function killBoss(){
     dirs.scoreEl += 45
 
@@ -8,6 +9,8 @@ export function killBoss(){
 
     classListAddFunc(dirs.bossContainer, "dieBoss")
     classListRemoveFunc(document.body, "showBef")
+
+    scores()
     
     clearInterval(dirs.intervalId)
     clearInterval(dirs.spawnInterval)

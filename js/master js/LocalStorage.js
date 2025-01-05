@@ -34,6 +34,12 @@ function loadingData() {
                 styleHpBarTextContent(dirs.score, value)
                 dirs.scoreEl = Number(value)
             }
+        },
+        {
+            key: "highestScore",
+            do: value => {
+                dirs.higestScore = Number(value)
+            }
         }
 
     ]

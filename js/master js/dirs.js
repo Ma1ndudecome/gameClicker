@@ -14,4 +14,5 @@ export const dirs = {
     intervalDamage:0,
     score:document.querySelector(".scoreItem span"),
     scoreEl:0,
+    higestScore:0,
 }

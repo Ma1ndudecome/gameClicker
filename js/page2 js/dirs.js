@@ -16,5 +16,5 @@ export const dirs = {
     masIndex:[],
     score:document.querySelector(".scoreItem span"),
     scoreEl:0,
-    highestScore:0,
+    higestScore:0,
 }
