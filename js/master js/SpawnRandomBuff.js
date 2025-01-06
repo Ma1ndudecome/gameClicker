@@ -22,7 +22,7 @@ function spawn(){
     dirs.spawnInterval = setInterval(()=>{
         deleteBuff()
         spawnBuffRandom()
-    }, 5000)
+    }, 4500)
 }
 spawn()
 function deleteBuff(){

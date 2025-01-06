@@ -141,6 +141,18 @@ body{
     transition: 0.5s;
 }
 .infos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px
+}
+.infos:first-child{
+   color:white;
+    font-size: 30px;
+}
+.actions{
+    font-size: 23px;
 
 }
 
