@@ -18,4 +18,3 @@ function takeFromLocalStorage(){
 
 }
 takeFromLocalStorage()
-console.log('213')
