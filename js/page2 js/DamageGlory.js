@@ -5,7 +5,7 @@ import { Glory } from "../FirstPageJs/Glory.js";
 export const glory = new Glory
 function damageGlory(){
     dirs.damageInterval = setTimeout(()=>{
-        glory.damage(2)
+        glory.damage(6)
 
         stylehpBarWidth(dirs.healGlory,glory.hp)
         styleHpBarTextContent(dirs.textHeal, glory.hp)
@@ -17,7 +17,7 @@ function damageGlory(){
         }, 500)
 
         localStorage.setItem("hpGlory", glory.hp)
-    },1000)
+    },1500)
 }
 
 glory.obsHp.subscribe((e)=>{
