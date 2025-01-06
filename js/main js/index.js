@@ -1,4 +1,5 @@
 // ! StartDiv(Click)
+import "./takeItemLocal.js"
 import { start } from "./startDiv.js";
 start()
 
