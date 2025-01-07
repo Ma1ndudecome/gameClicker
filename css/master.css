@@ -183,7 +183,6 @@ body.showAfter::after{
     background-color: rgb(100, 51, 51);
     height: 100%;
     transition: 0.5s;
-
 }
 .main-inv{
     height: 70%;
