@@ -1,11 +1,11 @@
-import { dirs } from "./const.js"
+import { hightScoreItems } from "./const.js"
 function takeFromLocalStorage(){
-    
+   
     const masLocalItem = [
         {
             key:"highestScore",
             do:value=>{
-                dirs.hightScoreItems.textContent = value
+                hightScoreItems.textContent = value
             }
         },
     ]

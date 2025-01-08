@@ -31,9 +31,12 @@ function saveLocalStorage(){
         {
             key:"masIndex",
             do:(value)=>{
+                if(value === '') return
                 dirs.masIndex = value.split(',')
+                console.log(dirs.masIndex)
                 
                 dirs.masIndex.forEach(el=>{
+                    
                     dirs.inventory[Number(el)].insertAdjacentHTML("afterbegin", localStorage.getItem("buffMarking"))
                     classListAddFunc(dirs.inventory[Number(el)].querySelector(".buff"), "toInv")
                     buffEventFunction(dirs.inventory[Number(el)].querySelector(".buff"))
