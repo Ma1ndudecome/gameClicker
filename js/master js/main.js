@@ -7,5 +7,5 @@ import "./damageGlory.js"
 import "./SpawnRandomBuff.js"
 import "./ClearSomeElLocalStorage.js"
 import { playAudio } from "../FirstPageJs/playAudio.js"
-import { soundDragon } from "../FirstPageJs/audio.js"
-// playAudio(soundDragon)
+import { soundDragon } from "../FirstPageJs/audioM.js"
+playAudio(soundDragon)

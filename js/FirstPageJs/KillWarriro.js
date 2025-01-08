@@ -5,7 +5,7 @@ import { spawnNewBuff } from "./spawnBuff.js";
 import { classListRemoveFunc } from "./BaseFunc.js";
 import { warrior as warriorItems } from "./DamageKillWarrior.js";
 import { playAudio } from "./playAudio.js";
-import { soundDead } from "./audio.js";
+import { soundDead } from "./audioM.js";
 import { scores } from "./highestScore.js";
 export function killWarrior(el, warrior){
     spawnNewBuff()

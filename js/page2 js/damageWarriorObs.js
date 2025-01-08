@@ -3,7 +3,7 @@ import { dirs } from "./dirs.js";
 import { damageWarrior } from "../FirstPageJs/DamageKillWarrior.js";
 import { killWarrior } from "./KillWarrior.js";
 import { styleHpBarTextContent } from "../FirstPageJs/BaseFunc.js";
-import { soundHit, soundDead } from "../FirstPageJs/audio.js";
+import { soundHit, soundDead } from "../FirstPageJs/audioM.js";
 import { playAudio } from "../FirstPageJs/playAudio.js";
 export function warriorDamageEventListener(el, warrior){
     el.addEventListener("click", ()=>{

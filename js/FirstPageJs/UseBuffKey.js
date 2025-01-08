@@ -1,8 +1,8 @@
 import { dirs } from "./dirs.js"
 import { healWarrior } from "./HealWarrior.js"
 import { playAudio } from "./playAudio.js"
-import { soundDringPotion } from "./audio.js"
-import { soundHeal } from "./audio.js"
+import { soundDringPotion } from "./audioM.js"
+import { soundHeal } from "./audioM.js"
 
  function keyHeal(){
     document.addEventListener("keydown", (e)=>{

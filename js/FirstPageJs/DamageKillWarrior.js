@@ -2,7 +2,7 @@ import { Warrior } from "./Warrior.js";
 import { dirs } from "./dirs.js";
 import { killWarrior } from "./KillWarriro.js";
 import { playAudio } from "./playAudio.js";
-import { soundHit } from "./audio.js";
+import { soundHit } from "./audioM.js"
 
 export const warrior = new Warrior()
 
