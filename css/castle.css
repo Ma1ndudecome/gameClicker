@@ -1,7 +1,6 @@
 /* html body */
 html,
 body {
-    padding: 30px;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -113,6 +112,9 @@ body.show-after::after {
     position: relative;
     width: 100%;
     height: 100%;
+    padding: 55px 60px 0px 60px;
+    box-sizing: border-box;
+
 }
 
 /*! loseBlock */
@@ -223,13 +225,15 @@ body.show-after::after {
         display: flex;
         align-items: center;
         text-align: center;
+        width: 380px;
         .health_item{
             display: flex;
             margin-left: 55px;
-            width: 330px;
-            background-color: #3a0a0a;
+            background-color: rgb(100, 51, 51);
+
             height: 98px;
             position: relative;
+            width: 100%;
         }
                 p{
                     position: absolute;
@@ -260,13 +264,11 @@ body.show-after::after {
 } */
 
 /*! Полоса здоровья */
-/* .health_item {
+.health_item {
     height: 20px;
-    background: linear-gradient(90deg, rgba(176, 0, 0, 1), rgba(255, 0, 0, 0.7));
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), inset 0 0 5px rgba(176, 0, 0, 1);
     transition: width 0.3s ease;
     width: 100%; 
-} */
+}
 
 
 /* .health img {
@@ -302,7 +304,7 @@ body.show-after::after {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.1);
     max-width: 350px;
     min-height: 240px;
-    margin-top:100px ;
+    margin-top: 70px;
 }
 
 .block {
@@ -336,7 +338,7 @@ body.show-after::after {
 
 .img {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 30%;
     width: 25%;
     transform: translateY(0px) translateX(400px) rotate(0deg);

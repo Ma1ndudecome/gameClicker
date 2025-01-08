@@ -16,6 +16,7 @@ warriorDamageEventListener(dirs.warrior, warrior)
 export function subscribeFunc(healtWarrior, warrior, containerHealth, ElWarrior){
     warrior.obs.subscribe((e)=>{
         if(e === "damage"){
+            
             damageWarrior(healtWarrior, warrior)
             playAudio(soundHit)
         }else if(e === "kill"){

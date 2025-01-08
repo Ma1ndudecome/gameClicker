@@ -15,7 +15,7 @@ function damageGlory(){
     dirs.id = setTimeout(()=>{
         classListAddFunc(document.body, "shof-bef")
         document.body.classList.toggle("show-after-more")
-        glory.damage(15)
+        glory.damage(0)
         stylehpBarWidth(dirs.GloryHealth, glory.hp)
         localStorage.setItem("hpGlory", glory.hp)
 
@@ -23,6 +23,8 @@ function damageGlory(){
 }
 export function startDamageGlory(){
     glory.obsHp.subscribe((event)=>{
+  
+
         if(event === "damage"){
             damageGlory()
         }else if(event === "kill"){
