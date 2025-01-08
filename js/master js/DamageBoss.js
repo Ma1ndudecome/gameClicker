@@ -3,7 +3,7 @@ import { dirs } from "./dirs.js";
 import { classListAddFunc, styleHpBarTextContent, stylehpBarWidth, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js";
 import { pixelToProccent } from "./PixelToProccentFunc.js";
 import { playAudio } from "../FirstPageJs/playAudio.js";
-import { soundDamageGragon } from "../FirstPageJs/audio.js";
+import { soundDamageGragon } from "../FirstPageJs/audioM.js";
 dirs.bossItem.addEventListener("click", ()=>{
     if(!dirs.sword.classList.contains("attackAnim")){
         boss.damage(17)

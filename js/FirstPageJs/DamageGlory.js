@@ -1,7 +1,7 @@
 import { Glory } from "./Glory.js";
 import { classListAddFunc, stylehpBarWidth } from "./BaseFunc.js";
 import { dirs } from "./dirs.js";
-import { lose } from "./audio.js";
+import { lose } from "./audioM.js";
 import { playAudio } from "./playAudio.js";
 export const glory = new Glory()
 

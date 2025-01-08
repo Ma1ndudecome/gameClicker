@@ -2,7 +2,7 @@ import { glory } from "./damageGlory.js";
 import { stylehpBarWidth, styleHpBarTextContent, classListAddFunc, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js";
 import { dirs } from "./dirs.js";
 import {playAudio} from "../FirstPageJs/playAudio.js"
-import {soundHeal, soundDringPotion} from "../FirstPageJs/audio.js"
+import {soundHeal, soundDringPotion} from "../FirstPageJs/audioM.js"
 export function healGlory(){
     glory.addHp(20)
 
