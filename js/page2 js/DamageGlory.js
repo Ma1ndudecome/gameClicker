@@ -2,10 +2,10 @@ import { dirs } from "./dirs.js"
 import { classListAddFunc, stylehpBarWidth, styleHpBarTextContent, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js";
 import { killGlory } from "./KillGlory.js";
 import { Glory } from "../FirstPageJs/Glory.js";
-export const glory = new Glory
+export const glory = new Glory()
 function damageGlory(){
     dirs.damageInterval = setTimeout(()=>{
-        glory.damage(0)
+        glory.damage(15)
 
         stylehpBarWidth(dirs.healGlory,glory.hp)
 
@@ -16,7 +16,7 @@ function damageGlory(){
         }, 500)
 
         localStorage.setItem("hpGlory", glory.hp)
-    },1500)
+    },2500)
 }
 
 glory.obsHp.subscribe((e)=>{

@@ -5,8 +5,8 @@ import { playAudio } from "../FirstPageJs/playAudio.js"
 import { soundHeal, soundDringPotion } from "../FirstPageJs/audioM.js"
 import { classListAddFunc, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js"
 export function HealGlory(){
-    glory.addHp(20)
-
+    glory.addHp(25)
+    console.log(glory.hp)
     stylehpBarWidth(dirs.healGlory, glory.hp)
 
     soundHeal.volume = 0.5
