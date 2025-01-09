@@ -1,14 +1,13 @@
 import {Glory} from "../FirstPageJs/Glory.js"
 import { dirs } from "./dirs.js"
-import { stylehpBarWidth, styleHpBarTextContent, classListAddFunc, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js"
+import { stylehpBarWidth,  classListAddFunc, classListRemoveFunc } from "../FirstPageJs/BaseFunc.js"
 export const glory = new Glory()
 
 export function damageGlory(){
     dirs.intervalId = setTimeout(()=>{
-        glory.damage(14)
+        glory.damage(0)
         stylehpBarWidth(dirs.hpBar, glory.hp)
 
-        styleHpBarTextContent(dirs.hpBarText, glory.hp)
 
         classListAddFunc(document.body, "showBef")
 

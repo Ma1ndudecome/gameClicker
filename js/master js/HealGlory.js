@@ -8,7 +8,6 @@ export function healGlory(){
 
     stylehpBarWidth(dirs.hpBar, glory.hp)
 
-    styleHpBarTextContent(dirs.hpBarText, glory.hp)
 
     classListAddFunc(document.body, "showAfter")
 

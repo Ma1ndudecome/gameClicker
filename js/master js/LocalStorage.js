@@ -12,7 +12,6 @@ function loadingData() {
             do: value => {
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.hpBar, glory.hp)
-                styleHpBarTextContent(dirs.hpBarText, glory.hp)
             }
         },
         {
