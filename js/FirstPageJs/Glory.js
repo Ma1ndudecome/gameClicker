@@ -14,6 +14,7 @@ export class Glory{
         this.obsHp.broadcast("damage")
     }
     addHp(value){
+        console.log(value)
         this.hp = Math.min(this.hp + value, 100)
     }
 }
