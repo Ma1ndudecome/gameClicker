@@ -16,7 +16,6 @@ function damageGlory(){
         classListAddFunc(document.body, "shof-bef")
         document.body.classList.toggle("show-after-more")
         glory.damage(13)
-        console.log(glory.hp)
         stylehpBarWidth(dirs.GloryHealth, glory.hp)
         localStorage.setItem("hpGlory", glory.hp)
 
