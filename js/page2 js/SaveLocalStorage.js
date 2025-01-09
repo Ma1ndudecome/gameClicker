@@ -9,7 +9,6 @@ function saveLocalStorage(){
             do:(value)=>{
                 glory.hp = Number(value)
                 stylehpBarWidth(dirs.healGlory, glory.hp)
-                styleHpBarTextContent(dirs.textHeal, glory.hp)
             }
         },
         {

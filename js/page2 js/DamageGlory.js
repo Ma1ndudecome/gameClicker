@@ -5,10 +5,9 @@ import { Glory } from "../FirstPageJs/Glory.js";
 export const glory = new Glory
 function damageGlory(){
     dirs.damageInterval = setTimeout(()=>{
-        glory.damage(6)
+        glory.damage(0)
 
         stylehpBarWidth(dirs.healGlory,glory.hp)
-        styleHpBarTextContent(dirs.textHeal, glory.hp)
 
         classListAddFunc(document.body, "showBef")
 

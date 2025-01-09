@@ -8,7 +8,6 @@ export function HealGlory(){
     glory.addHp(20)
 
     stylehpBarWidth(dirs.healGlory, glory.hp)
-    styleHpBarTextContent(dirs.textHeal, glory.hp)
 
     soundHeal.volume = 0.5
     soundDringPotion.volume = 0.5
